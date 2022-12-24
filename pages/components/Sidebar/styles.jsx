@@ -25,6 +25,7 @@ border-bottom-right-radius: 10px;
   gap: 10px;
 }
 
+
 button {
   background-color: white;
   border-radius: 50px;
@@ -39,6 +40,7 @@ button {
   font-weight: 700;
   outline-style: none;
   width: 60px;
+  height: 20px;
 }
 
 
