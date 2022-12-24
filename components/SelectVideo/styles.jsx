@@ -22,7 +22,7 @@ background-color: #a2a0a039;
 .right {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3.4px;
     width: 145px;
     height: 70px;
     color: #ffffffd6;
@@ -34,9 +34,12 @@ h3 {
 }
 
 p {
-    font-size: 9px;
-    font-weight: 700;
+    font-size: 10px;
     margin: 0;
+}
+
+.views {
+    font-size: 8px;
 }
 
 

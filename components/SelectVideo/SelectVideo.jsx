@@ -8,8 +8,10 @@ export const SelectVideo = ({name, author, views, img, url, setChosenVideo}) => 
               <img src={img} className='left'/>
         <div className='right'>
           <h3>{name}</h3>
-          <p>{author}</p>
-          <p>{views} views</p>
+          <div>
+            <p>{author}</p>
+            <p className='views'>{views} views</p>
+          </div>
         </div>
     </Container>
   )
