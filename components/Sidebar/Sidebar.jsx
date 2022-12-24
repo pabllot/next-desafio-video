@@ -21,10 +21,10 @@ export const Sidebar = ({setChosenVideo }) => {
     <Container>
       <div className='sidebar'>
         <div className='filter'> 
-          <button className='button' onClick={()=>setFilter('kids')}>Kids</button>
+          <button className='button' onClick={()=>setFilter('kids')}> Office</button>
           <button className='button' onClick={()=>setFilter('cats')}>Cats</button>
           <button className='button' onClick={()=>setFilter('dogs')}>Dogs</button>
-          <button className='button' onClick={()=>setFilter('soccer')}>Soccer</button>
+          <button className='button' onClick={()=>setFilter('soccer')}>Kids</button>
         </div>
        {filteredVids.slice(0, 5).map(item=><SelectVideo setChosenVideo={setChosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
