@@ -51,8 +51,7 @@ button {
 }
 
 .button:active {
-  background-color: #000000b1;
-  color: #ffffff;
+  color: #a4a0a0;
 }
 
 @media (max-width: 1024px) {
