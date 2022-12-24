@@ -21,7 +21,7 @@ export const Sidebar = ({setChosenVideo }) => {
     <Container>
       <div className='sidebar'>
         <div className='filter'> 
-          <button className='button' onClick={()=>setFilter('kids')}> Office</button>
+          <button className='button office' onClick={()=>setFilter('kids')}>The Office</button>
           <button className='button' onClick={()=>setFilter('cats')}>Cats</button>
           <button className='button' onClick={()=>setFilter('dogs')}>Dogs</button>
           <button className='button' onClick={()=>setFilter('soccer')}>Kids</button>

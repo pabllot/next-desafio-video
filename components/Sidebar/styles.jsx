@@ -43,6 +43,11 @@ button {
   height: 20px;
 }
 
+.office {
+  font-size: 13px;
+  width: 70px;
+}
+
 
 .button:focus {
   background-color: #898181;
