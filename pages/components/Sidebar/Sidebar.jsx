@@ -16,6 +16,7 @@ export const Sidebar = ({setChosenVideo }) => {
     }
   },[filter])
 
+
   return (
     <Container>
       <div className='sidebar'>

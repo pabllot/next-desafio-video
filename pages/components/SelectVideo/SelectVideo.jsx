@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from './styles';
 
 export const SelectVideo = ({name, author, views, img, url, setChosenVideo}) => {
+  console.log(url)
   return (
     <Container onClick={()=>setChosenVideo(url)}>
               <img src={img} className='left'/>
