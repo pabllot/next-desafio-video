@@ -39,7 +39,6 @@ button {
   font-weight: 700;
   outline-style: none;
   width: 60px;
-  height: 20px;
 }
 
 
