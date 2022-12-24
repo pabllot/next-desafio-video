@@ -20,9 +20,12 @@ background-color: #a2a0a039;
 }
 
 .right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 145px;
     height: 70px;
-    color: white;
+    color: #ffffffd6;
 }
 
 h3 {
