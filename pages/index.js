@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { Sidebar } from './components/Sidebar/Sidebar'
-import { Video } from './components/Video/Video'
+import { Sidebar } from '../components/Sidebar/Sidebar'
+import { Video } from '../components/Video/Video'
 import  React from 'react'
 import {useState} from 'react'
-import { vids } from './components/Database/Data'
+import { vids } from '../components/Database/Data'
 
 export default function Home() {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
