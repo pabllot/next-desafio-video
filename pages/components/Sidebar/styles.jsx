@@ -34,10 +34,12 @@ button {
   outline: none;
   text-align: center;
   text-decoration: none;
-  font-size: 14px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 15px;
   font-weight: 700;
   outline-style: none;
   width: 60px;
+  height: 20px;
 }
 
 
