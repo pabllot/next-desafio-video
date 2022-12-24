@@ -45,11 +45,11 @@ button {
 
 
 .button:focus {
-  color: #898181;
+  background-color: #898181;
 }
 
 .button:active {
-  background-color: #000000b1;
+  background-color: #6a6969af;
   color: #ffffff;
 }
 
