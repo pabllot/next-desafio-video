@@ -4,7 +4,7 @@
   justify-content: center;
   margin: 0;
   height: 100vh;
-  font-family: var(--font-mono);
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
