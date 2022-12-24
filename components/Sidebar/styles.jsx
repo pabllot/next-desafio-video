@@ -45,13 +45,12 @@ button {
 
 
 .button:focus {
-  background-color: #090909cb;
-  color: white;
-  border: 2px solid white;
+  color: #898181;
 }
 
 .button:active {
-  color: #a4a0a0;
+  background-color: #000000b1;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
