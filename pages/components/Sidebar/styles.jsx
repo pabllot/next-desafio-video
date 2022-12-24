@@ -35,7 +35,7 @@ button {
   text-align: center;
   text-decoration: none;
   font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   outline-style: none;
   width: 60px;
