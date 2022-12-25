@@ -23,10 +23,10 @@ overflow: hidden;
 
 .filter {
   height: 30px;
+  width: 75%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-evenly;
 }
 
 
@@ -74,7 +74,7 @@ button {
 }
 
 svg {
-  color: white;
+  color: #f6d33a;
 }
 
 .light svg {
@@ -90,24 +90,36 @@ svg {
   height: 520px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
+  .filter {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   width: 420px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  .filter {
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
   width: 350px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  .filter {
+    width: 100%;
+  }
 }
 
 @media (max-width: 350px) {
   width: 310px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  .filter {
+    width: 100%;
+  }
 }
 
 
