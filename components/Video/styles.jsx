@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
   display: flex;
   align-items: center;
   
@@ -135,9 +134,9 @@ video {
   
   @media (max-width: 768px) {
     height: 190px;
-    width: 404px;
-    margin-top: 15px;
+    
     .video-container {
+      width: 100vw;    
       height: 200px;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;      
@@ -146,8 +145,8 @@ video {
   
   @media (max-width: 620px) {
     height: 200px;
-    width: 350px;
     .video-container {
+      width: 100vw;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
     }   
@@ -155,9 +154,8 @@ video {
   
   @media (max-width: 350px) {
     height: 200px;
-    width: 310px;    
-    margin-top: 5px;
     .video-container {
+      width: 100vw;    
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
       height: 200px;

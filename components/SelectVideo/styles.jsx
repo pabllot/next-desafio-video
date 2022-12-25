@@ -70,12 +70,12 @@ p {
   height: 80px;
   .left {
     height: 60px;
-    width: 125px;
+    width: 33%;
   }
 
   .right {
     height: 50px;
-    width: 190px;
+    width: 50%;
     gap: 0px;
   } 
   p {
@@ -92,12 +92,12 @@ p {
   height: 80px;
   .left {
     height: 70px;
-    width: 125px
+    width: 40%;
   }
 
   .right {
     height: 70px;
-    width: 145px;
+    width: 50%;
   }
   p {
     font-size: 10px
@@ -113,12 +113,12 @@ p {
   width: 320px;
   height: 80px;
   .left {
-    width: 145px;
+    width: 40%;
     height: 70px;
 }
 
 .right {
-    width: 145px;
+    width: 50%;
     height: 70px;
 }
 

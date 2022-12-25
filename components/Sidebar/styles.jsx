@@ -100,29 +100,41 @@ svg {
 }
 
 @media (max-width: 768px) {
-  width: 404px;
+  width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   .filter {
     width: 100%;
+  }
+  .sidebar {
+    width: 100vw;
+
   }
 }
 
 @media (max-width: 620px) {
-  width: 350px;
+  width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   .filter {
     width: 100%;
   }
+  .sidebar {
+    width: 100vw;
+
+  }
 }
 
 @media (max-width: 350px) {
-  width: 310px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   .filter {
     width: 100%;
+  }
+  
+  .sidebar {
+    width: 100vw;
+
   }
 }
 
