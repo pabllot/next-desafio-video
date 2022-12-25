@@ -5,9 +5,9 @@ display: flex;
 align-items: center;
 height: 500px;
 width: 340px;
-background-color: #121212f4;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
+overflow: hidden;
 
 
 .sidebar {
@@ -15,6 +15,7 @@ border-bottom-right-radius: 10px;
   flex-direction: column;
   justify-content: center;
   margin-inline: auto;    
+  background-color: #000000e2;
 }
 
 .filter {
@@ -56,6 +57,24 @@ button {
 .button:active {
   background-color: #6a6969af;
   color: #ffffff;
+}
+
+.light {
+  background-color: #e7e0e0;
+}
+
+.light button {
+  border: 1px solid black;
+  color: black;
+  
+}
+
+svg {
+  color: white;
+}
+
+.light svg {
+  color: black
 }
 
 @media (max-width: 1024px) {

@@ -5,29 +5,30 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   
-.video-container {
-  position: relative;
-  width: 850px;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  margin-inline: auto;
-  background-color: black;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  overflow: hidden;
-}
-
-.video-container.theater, 
-.video-container.full-screen {
-  max-width: initial;
-  width: 100%;
-}
-
-.video-container.video-container.theater {
-  height: 82vh;
-  width: 100vw;
-}
+  .video-container {
+    position: relative;
+    width: 850px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  
+  .video-container.theater, 
+  .video-container.full-screen {
+    max-width: initial;
+    width: 100%;
+  }
+  
+  .video-container.video-container.theater {
+    height: 82vh;
+    width: 100vw;
+  }
 
 .video-container.full-screen {
   max-height: 100vh;
@@ -120,7 +121,10 @@ video {
   z-index: 999;
   bottom: 38px;
   left: 0;}
-
+  .light{
+    
+    background-color: #0000001b;
+  }
   
   @media (max-width: 768px) {
     height: 200px;

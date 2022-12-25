@@ -9,6 +9,7 @@ import { vids } from '../components/Database/Data'
 export default function Home() {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
   const [chosenVideo, setChosenVideo] = useState(vids[0].url);
+  const [theme, setTheme] = useState(false)
 
   return (
     <>
@@ -19,9 +20,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} />
-         {!isTheaterMode && <Sidebar setChosenVideo={setChosenVideo} /> }
+      <main className={`${styles.main} ${ theme ? styles.light : ''}`}>
+         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} theme={theme} setTheme={setTheme} />
+         {!isTheaterMode && <Sidebar setChosenVideo={setChosenVideo}  theme={theme} setTheme={setTheme} /> }
       </main>
     </>
   )

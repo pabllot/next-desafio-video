@@ -7,7 +7,7 @@ import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
 import { CgScreenWide, CgScreen } from 'react-icons/cg'
 import { GoUnmute } from 'react-icons/go'
 
-export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
+export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setTheme}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(true)
@@ -87,7 +87,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
 
   return (
     <Container>
-      <div ref={fullScreenRef} className={`video-container paused  ${isTheaterMode ? "theater" : ""}`}>
+      <div ref={fullScreenRef} className={`video-container paused  ${isTheaterMode ? "theater" : ""} ${theme ? 'light' : ''}`}>
         <div className='progress' style={{width: `${width}%`}}></div>
         <div className='video-controls-container'>
           <div className="timeline-container"></div>

@@ -5,6 +5,12 @@
   margin: 0;
   height: 100vh;
   font-family: 'Hanken Grotesk', sans-serif;
+  background: rgba(0, 0, 0, 0.829);
+
+}
+
+.light {
+  background-color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
