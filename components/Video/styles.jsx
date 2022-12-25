@@ -125,7 +125,7 @@ video {
     
     background-color: #0000001b;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
     .video-container {
       width: 680px;
       height: 520px;

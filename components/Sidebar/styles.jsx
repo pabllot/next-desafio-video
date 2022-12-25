@@ -85,7 +85,7 @@ svg {
   align-items: center;
   justify-content: center;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   width: 320px;
   height: 520px;
   border-top-right-radius: 10px;
