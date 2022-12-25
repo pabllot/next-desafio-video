@@ -112,21 +112,9 @@ p {
   width: 320px;
   height: 80px;
   .left {
-    height: 60px;
     width: 125px
   }
 
-  .right {
-    height: 60px;
-    gap: 0px;
-  }
-  p {
-    font-size: 10px
-  }
-  h3 {
-    font-size: 12px;
-  }
-  
 
 }
 
