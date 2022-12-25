@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 340px;
-height: 94px;
+height: 108px;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
@@ -15,17 +15,17 @@ cursor: pointer;
 }
 
 .left {
-    width: 130px;
-    height: 70px;
-    border-radius: 8px;
+    width: 140px;
+    height: 80px;
+    border-radius: 4px;
 }
 
 .right {
     display: flex;
     flex-direction: column;
     gap: 3.4px;
-    width: 145px;
-    height: 70px;
+    width: 135px;
+    height: 60px;
 }
 
 h3 {
@@ -55,21 +55,28 @@ p {
 
 @media (max-width: 1024px) {
   width: 320px;
+  height: 94px;
+  
 
 }
 
 @media (max-width: 768px) {
   width: 420px;
-
+  height: 94px;
+  
 }
 
 @media (max-width: 620px) {
   width: 350px;
+  height: 94px;
+  
 
 }
 
 @media (max-width: 350px) {
   width: 320px;
+  height: 94px;
+  
 
 }
 

@@ -20,7 +20,7 @@ export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
 
 
   return (
-    <Container>
+    <Container >
         <div className={`sidebar ${theme ? 'light' : ''}`}>
           <div className={`filter ${theme ? 'light' : ''}`}> 
             <button className={`button office ${theme ? 'light' : ''}`} onClick={()=>setFilter('kids')}>The Office</button>

@@ -7,8 +7,8 @@ export const Container = styled.div`
   
   .video-container {
     position: relative;
-    width: 850px;
-    height: 500px;
+    width: 900px;
+    height: 600px;
     display: flex;
     justify-content: center;
     margin-inline: auto;
@@ -126,6 +126,12 @@ video {
     
     background-color: #0000001b;
   }
+  @media (max-width: 1024px) {
+    .video-container {
+      width: 680px;
+      height: 520px;
+    }
+  }
   
   @media (max-width: 768px) {
     height: 200px;
@@ -158,10 +164,5 @@ video {
     }
   }
 
-  @media (max-width: 1024px) {
-    .video-container {
-      width: 680px;
-    }
-  }
 
 `

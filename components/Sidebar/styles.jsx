@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
 display: flex;
 align-items: center;
-height: 500px;
-width: 340px;
+height: 600px;
+width: 440px;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
 overflow: hidden;
@@ -14,8 +14,11 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 600px;
   margin-inline: auto;    
-  background-color: #000000e2;
+  background: #000000e2;
 }
 
 .filter {
@@ -84,6 +87,7 @@ svg {
 }
 @media (max-width: 1024px) {
   width: 320px;
+  height: 520px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
 }
