@@ -13,7 +13,7 @@ border-bottom-right-radius: 10px;
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 440px;
   height: 600px;
@@ -100,7 +100,7 @@ svg {
 }
 
 @media (max-width: 768px) {
-  width: 100vw;
+  width: 70vw;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   height: 70%;
@@ -124,14 +124,14 @@ svg {
     width: 100%;
   }
   .sidebar {
-    width: 100vw;
+    width: 80vw;
     height: 100%;
 
 
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   height: 70%;

@@ -136,7 +136,7 @@ video {
     height: 30%;
     
     .video-container {
-      width: 100vw;    
+      width: 70vw;    
       height: 100%;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;      
@@ -146,14 +146,14 @@ video {
   @media (max-width: 620px) {
     height: 30%;
     .video-container {
-      width: 100vw;
+      width: 80vw;
       height: 100%;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
     }   
   }
   
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     height: 30%;
     .video-container {
       height: 100%;
