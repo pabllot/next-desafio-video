@@ -75,6 +75,7 @@ p {
 
   .right {
     height: 50px;
+    width: 190px;
     gap: 0px;
   } 
   p {
@@ -114,7 +115,10 @@ p {
   .left {
     width: 125px
   }
+  .right {
+    width: 145px;
 
+  }
 
 }
 
