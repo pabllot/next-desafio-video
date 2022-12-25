@@ -134,8 +134,8 @@ video {
   }
   
   @media (max-width: 768px) {
-    height: 200px;
-    width: 420px;
+    height: 190px;
+    width: 404px;
     margin-top: 20px;
     .video-container {
       height: 200px;

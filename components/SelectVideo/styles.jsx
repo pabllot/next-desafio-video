@@ -23,6 +23,7 @@ cursor: pointer;
 .right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3.4px;
     width: 145px;
     height: 80px;
@@ -56,26 +57,75 @@ p {
 @media (max-width: 1024px) {
   width: 320px;
   height: 94px;
+  .left {
+    width: 125px
+  }
+
   
 
 }
 
 @media (max-width: 768px) {
   width: 420px;
-  height: 94px;
+  height: 80px;
+  .left {
+    height: 60px;
+    width: 125px;
+  }
+
+  .right {
+    height: 50px;
+    gap: 0px;
+  } 
+  p {
+    font-size: 10px
+  }
+  h3 {
+    font-size: 12px;
+  }
   
 }
 
 @media (max-width: 620px) {
   width: 350px;
-  height: 94px;
+  height: 80px;
+  .left {
+    height: 60px;
+    width: 125px
+  }
+
+  .right {
+    height: 60px;
+    gap: 0px;
+  }
+  p {
+    font-size: 10px
+  }
+  h3 {
+    font-size: 12px;
+  }
   
 
 }
 
 @media (max-width: 350px) {
   width: 320px;
-  height: 94px;
+  height: 80px;
+  .left {
+    height: 60px;
+    width: 125px
+  }
+
+  .right {
+    height: 60px;
+    gap: 0px;
+  }
+  p {
+    font-size: 10px
+  }
+  h3 {
+    font-size: 12px;
+  }
   
 
 }

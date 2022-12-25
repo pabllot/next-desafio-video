@@ -6,6 +6,7 @@ align-items: center;
 height: 600px;
 width: 440px;
 border-top-right-radius: 10px;
+overflow: hidden;
 border-bottom-right-radius: 10px;
 
 
@@ -18,7 +19,6 @@ border-bottom-right-radius: 10px;
   height: 600px;
   margin-inline: auto;    
   background: #000000e2;
-  overflow: hidden;
 }
 
 .filter {
@@ -100,7 +100,7 @@ svg {
 }
 
 @media (max-width: 768px) {
-  width: 420px;
+  width: 404px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
   .filter {
