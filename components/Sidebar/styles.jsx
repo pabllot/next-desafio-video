@@ -7,7 +7,6 @@ height: 600px;
 width: 440px;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
-overflow: hidden;
 
 
 .sidebar {
@@ -19,6 +18,7 @@ overflow: hidden;
   height: 600px;
   margin-inline: auto;    
   background: #000000e2;
+  overflow: hidden;
 }
 
 .filter {
@@ -93,6 +93,10 @@ svg {
   .filter {
     width: 100%;
   }
+
+  .sidebar {
+    height: 520px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -121,6 +125,7 @@ svg {
     width: 100%;
   }
 }
+
 
 
 `
