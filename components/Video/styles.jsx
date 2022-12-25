@@ -76,6 +76,7 @@ video {
   cursor: pointer;
   opacity: .9;
   transition: opacity 150ms ease-in-out;
+  outline: none;
 }
 
 .video-controls-container .controls button:hover,
