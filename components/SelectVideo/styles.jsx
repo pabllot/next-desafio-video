@@ -69,42 +69,30 @@ p {
   width: 420px;
   height: 80px;
   .left {
-    height: 60px;
+    height: 80px;
     width: 33%;
   }
 
   .right {
-    height: 50px;
+    height: 80px;
     width: 50%;
-    gap: 0px;
   } 
-  p {
-    font-size: 10px
-  }
-  h3 {
-    font-size: 12px;
-  }
-  
+
 }
 
 @media (max-width: 620px) {
   width: 350px;
   height: 80px;
   .left {
-    height: 70px;
+    height: 80px;
     width: 40%;
   }
 
   .right {
-    height: 70px;
+    height: 80px;
     width: 50%;
   }
-  p {
-    font-size: 10px
-  }
-  h3 {
-    font-size: 12px;
-  }
+
   
 
 }
@@ -114,23 +102,15 @@ p {
   height: 80px;
   .left {
     width: 40%;
-    height: 70px;
+    height: 80px;
 }
 
 .right {
     width: 50%;
-    height: 70px;
+    height: 80px;
 }
 
-h3 {
-    font-size: 12px;
 
-    
-}
-
-p {
-    font-size: 10px;
-}
 
 
 }
