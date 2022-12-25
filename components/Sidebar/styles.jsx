@@ -21,16 +21,16 @@ overflow: hidden;
 .filter {
   height: 30px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
 
 button {
-  background-color: white;
-  border-radius: 50px;
-  color: #000000df;
+  background-color: #877d7dcc;
+  border-radius: 5px;
+  color: #ffececdf;
   cursor: pointer;
   border: none;
   outline: none;
@@ -40,7 +40,7 @@ button {
   font-size: 14px;
   font-weight: 700;
   outline-style: none;
-  width: 60px;
+  width: 50px;
   height: 20px;
 }
 
@@ -51,7 +51,8 @@ button {
 
 
 .button:focus {
-  background-color: #898181;
+  background-color: #1d1a1a;
+  color: white;
 }
 
 .button:active {
@@ -64,8 +65,8 @@ button {
 }
 
 .light button {
-  border: 1px solid black;
-  color: black;
+  color: #201f1fda;
+  background-color: #a29b9b9b;
   
 }
 
@@ -76,7 +77,11 @@ svg {
 .light svg {
   color: black
 }
-
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 1024px) {
   width: 320px;
   border-top-right-radius: 10px;

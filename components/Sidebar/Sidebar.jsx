@@ -27,7 +27,7 @@ export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
             <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('cats')}>Cats</button>
             <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('dogs')}>Dogs</button>
             <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('soccer')}>Kids</button>
-            <div className={`${theme ? 'light' : ''}`}onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</div>
+            <div className={`icon ${theme ? 'light' : ''}`}onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</div>
         </div>
        {filteredVids.slice(0, 5).map(item=><SelectVideo theme={theme} setTheme={setTheme} setChosenVideo={setChosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
