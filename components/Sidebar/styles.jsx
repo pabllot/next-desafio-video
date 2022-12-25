@@ -106,6 +106,7 @@ svg {
   height: 70%;
   .filter {
     width: 100%;
+    height: 8%;
   }
   .sidebar {
     width: 100vw;
@@ -122,6 +123,7 @@ svg {
   height: 70%;
   .filter {
     width: 100%;
+    height: 8%;
   }
   .sidebar {
     width: 80vw;
@@ -137,6 +139,7 @@ svg {
   height: 70%;
   .filter {
     width: 100%;
+    height: 8%;
   }
   
   .sidebar {
