@@ -129,14 +129,14 @@ video {
   @media (max-width: 768px) {
     height: 200px;
     width: 420px;
-    margin-top: 100px;
+    margin-top: 20px;
     .video-container {
       height: 200px;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;      
     }    
   }
-
+  
   @media (max-width: 620px) {
     height: 200px;
     width: 350px;
@@ -145,10 +145,11 @@ video {
       border-bottom-left-radius: 0;
     }   
   }
-
+  
   @media (max-width: 350px) {
     height: 200px;
     width: 320px;    
+    margin-top: 0px;
     .video-container {
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
