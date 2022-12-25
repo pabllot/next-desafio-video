@@ -24,13 +24,13 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 3.4px;
-    width: 135px;
-    height: 60px;
+    width: 145px;
+    height: 80px;
 }
 
 h3 {
     color: #ffffffd6;
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
 
     
@@ -38,7 +38,7 @@ h3 {
 
 p {
     color: #ffffffd6;
-    font-size: 10px;
+    font-size: 11px;
     margin: 0;
 }
 

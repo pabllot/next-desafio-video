@@ -23,7 +23,7 @@ overflow: hidden;
 
 .filter {
   height: 30px;
-  width: 75%;
+  width: 76%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
