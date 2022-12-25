@@ -148,7 +148,7 @@ video {
 
   @media (max-width: 350px) {
     height: 200px;
-    width: 300px;    
+    width: 320px;    
     .video-container {
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;

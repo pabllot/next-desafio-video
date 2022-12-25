@@ -101,7 +101,7 @@ svg {
 }
 
 @media (max-width: 350px) {
-  width: 300px;
+  width: 320px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
 }

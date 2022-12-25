@@ -69,7 +69,7 @@ p {
 }
 
 @media (max-width: 350px) {
-  width: 300px;
+  width: 320px;
 
 }
 
