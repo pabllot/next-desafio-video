@@ -113,7 +113,7 @@ p {
   width: 320px;
   height: 80px;
   .left {
-    width: 125px;
+    width: 145px;
     height: 70px;
 }
 
