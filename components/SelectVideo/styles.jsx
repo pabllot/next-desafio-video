@@ -36,7 +36,7 @@ h3 {
 
 p {
     color: #ffffffd6;
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
 }
 
