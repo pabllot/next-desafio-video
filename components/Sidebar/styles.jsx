@@ -91,7 +91,7 @@ svg {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
   .filter {
-    width: 100%;
+    width: 90%;
   }
 
   .sidebar {
