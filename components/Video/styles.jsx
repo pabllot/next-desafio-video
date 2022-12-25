@@ -148,8 +148,8 @@ video {
   
   @media (max-width: 350px) {
     height: 200px;
-    width: 320px;    
-    margin-top: 0px;
+    width: 310px;    
+    margin-top: 5px;
     .video-container {
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
