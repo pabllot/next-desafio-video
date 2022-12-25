@@ -23,23 +23,20 @@ cursor: pointer;
 .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 3.4px;
+    justify-content: space-evenly;
     width: 145px;
     height: 80px;
 }
 
 h3 {
     color: #ffffffd6;
-    font-size: 13px;
-    margin: 0;
-
-    
+    font-size: 15px;
+    margin: 0;   
 }
 
 p {
     color: #ffffffd6;
-    font-size: 11px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -60,9 +57,6 @@ p {
   .left {
     width: 125px
   }
-
-  
-
 }
 
 @media (max-width: 768px) {
@@ -107,10 +101,6 @@ p {
     width: 50%;
     height: 85%;
 }
-
-
-
-
 }
 
 
