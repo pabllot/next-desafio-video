@@ -6,6 +6,7 @@
   height: 100vh;
   font-family: 'Hanken Grotesk', sans-serif;
   background: rgba(0, 0, 0, 0.829);
+  overflow: hidden;
 
 }
 

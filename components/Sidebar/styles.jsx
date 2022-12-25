@@ -103,12 +103,13 @@ svg {
   width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  height: 70%;
   .filter {
     width: 100%;
   }
   .sidebar {
     width: 100vw;
-    height: 70vh;
+    height: 100%;
 
 
   }
@@ -118,12 +119,13 @@ svg {
   width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  height: 70%;
   .filter {
     width: 100%;
   }
   .sidebar {
     width: 100vw;
-    height: 70vh;
+    height: 100%;
 
 
   }
@@ -132,13 +134,14 @@ svg {
 @media (max-width: 350px) {
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+  height: 70%;
   .filter {
     width: 100%;
   }
   
   .sidebar {
     width: 100vw;
-    height: 70vh;
+    height: 100%;
 
   }
 }

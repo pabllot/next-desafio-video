@@ -133,28 +133,30 @@ video {
   }
   
   @media (max-width: 768px) {
-    height: 30vh;
+    height: 30%;
     
     .video-container {
       width: 100vw;    
-      height: 200px;
+      height: 100%;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;      
     }    
   }
   
   @media (max-width: 620px) {
-    height: 30vh;
+    height: 30%;
     .video-container {
       width: 100vw;
+      height: 100%;
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
     }   
   }
   
   @media (max-width: 350px) {
-    height: 30vh;
+    height: 30%;
     .video-container {
+      height: 100%;
       width: 100vw;    
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
