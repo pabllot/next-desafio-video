@@ -113,12 +113,25 @@ p {
   width: 320px;
   height: 80px;
   .left {
-    width: 125px
-  }
-  .right {
-    width: 145px;
+    width: 125px;
+    height: 70px;
+}
 
-  }
+.right {
+    width: 145px;
+    height: 70px;
+}
+
+h3 {
+    font-size: 12px;
+
+    
+}
+
+p {
+    font-size: 10px;
+}
+
 
 }
 
