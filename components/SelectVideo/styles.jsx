@@ -91,13 +91,13 @@ p {
   width: 350px;
   height: 80px;
   .left {
-    height: 60px;
+    height: 70px;
     width: 125px
   }
 
   .right {
-    height: 60px;
-    gap: 0px;
+    height: 70px;
+    width: 145px;
   }
   p {
     font-size: 10px
