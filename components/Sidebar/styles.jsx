@@ -108,6 +108,8 @@ svg {
   }
   .sidebar {
     width: 100vw;
+    height: 70vh;
+
 
   }
 }
@@ -121,6 +123,8 @@ svg {
   }
   .sidebar {
     width: 100vw;
+    height: 70vh;
+
 
   }
 }
@@ -134,6 +138,7 @@ svg {
   
   .sidebar {
     width: 100vw;
+    height: 70vh;
 
   }
 }

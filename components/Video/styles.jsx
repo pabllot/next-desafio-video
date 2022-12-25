@@ -133,7 +133,7 @@ video {
   }
   
   @media (max-width: 768px) {
-    height: 190px;
+    height: 30vh;
     
     .video-container {
       width: 100vw;    
@@ -144,7 +144,7 @@ video {
   }
   
   @media (max-width: 620px) {
-    height: 200px;
+    height: 30vh;
     .video-container {
       width: 100vw;
       border-top-right-radius: 10px;
@@ -153,12 +153,11 @@ video {
   }
   
   @media (max-width: 350px) {
-    height: 200px;
+    height: 30vh;
     .video-container {
       width: 100vw;    
       border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
-      height: 200px;
     }
   }
 
