@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 340px;
+width: 100vw;
 height: 108px;
 display: flex;
 align-items: center;
@@ -66,48 +66,46 @@ p {
 }
 
 @media (max-width: 768px) {
-  width: 420px;
-  height: 80px;
+  width: 100%;
+  height: 18%;
   .left {
-    height: 80px;
+    height: 85%;
     width: 33%;
   }
 
   .right {
-    height: 80px;
+    height: 85%;
     width: 50%;
   } 
 
 }
 
 @media (max-width: 620px) {
-  width: 350px;
-  height: 80px;
+    width: 90%;
+    height: 18%;
   .left {
-    height: 80px;
-    width: 40%;
+    height: 85%;
+    width: 45%;
   }
 
   .right {
-    height: 80px;
+    height: 85%;
     width: 50%;
-  }
-
-  
+  }  
 
 }
 
 @media (max-width: 350px) {
-  width: 320px;
-  height: 80px;
+    width: 90%;
+    height: 18%;
   .left {
     width: 40%;
-    height: 80px;
+    height: 85%;
 }
 
 .right {
     width: 50%;
-    height: 80px;
+    height: 85%;
 }
 
 
