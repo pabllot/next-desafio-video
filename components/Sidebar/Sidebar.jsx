@@ -6,7 +6,7 @@ import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
 
 export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
-  const [filter, setFilter] = useState('kids');
+  const [filter, setFilter] = useState('office');
   const [filteredVids, setFilteredVids] = useState([]);
 
 
@@ -23,10 +23,10 @@ export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
     <Container >
         <div className={`sidebar ${theme ? 'light' : ''}`}>
           <div className={`filter ${theme ? 'light' : ''}`}> 
-            <button className={`button office ${theme ? 'light' : ''}`} onClick={()=>setFilter('kids')}>The Office</button>
+            <button className={`button office ${theme ? 'light' : ''}`} onClick={()=>setFilter('office')}>The Office</button>
             <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('cats')}>Cats</button>
             <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('dogs')}>Dogs</button>
-            <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('soccer')}>Kids</button>
+            <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('kids')}>Kids</button>
             <div className={`icon ${theme ? 'light' : ''}`}onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</div>
           </div>
 
