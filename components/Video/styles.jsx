@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  width: 900px;
+  height: 650px;
   
   .video-container {
     position: relative;
-    width: 900px;
-    height: 650px;
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     margin-inline: auto;
     overflow: hidden;
@@ -125,9 +127,11 @@ video {
   }
   
   @media (max-width: 1100px) {
+    width: 680px;
+    height: 580px;
     .video-container {
-      width: 680px;
-      height: 520px;
+      width: 100%;
+      height: 100%;
     }
   }
   

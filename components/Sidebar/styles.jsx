@@ -89,7 +89,7 @@ svg {
 
 @media (max-width: 1100px) {
   width: 320px;
-  height: 520px;
+  height: 580px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
   .filter {
@@ -97,7 +97,7 @@ svg {
   }
 
   .sidebar {
-    height: 520px;
+    height: 100%;
   }
 }
 
