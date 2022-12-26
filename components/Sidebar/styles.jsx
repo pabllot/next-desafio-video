@@ -76,16 +76,17 @@ button {
 svg {
   color: #f6d33a;
 }
-
-.light svg {
-  color: black
-}
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
+
+.light svg {
+  color: #061869
+}
+
 @media (max-width: 1100px) {
   width: 320px;
   height: 520px;

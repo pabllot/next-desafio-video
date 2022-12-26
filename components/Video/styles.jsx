@@ -121,10 +121,11 @@ video {
   z-index: 999;
   bottom: 38px;
   left: 0;}
-  .light{
-    
-    background-color: #0000001b;
+  
+  .light{    
+    background-color: #e4dbdbe6;
   }
+  
   @media (max-width: 1100px) {
     .video-container {
       width: 680px;
