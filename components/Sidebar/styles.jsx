@@ -6,8 +6,8 @@ align-items: center;
 height: 600px;
 width: 440px;
 border-top-right-radius: 10px;
-overflow: hidden;
 border-bottom-right-radius: 10px;
+overflow: hidden;
 
 
 .sidebar {
