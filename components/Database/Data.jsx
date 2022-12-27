@@ -1,9 +1,9 @@
 export const vids = [
-{id: 1, name:  "Roubo de identidade não é uma piada, Jim!", author: "Pablo Teixeira", views: "7654", img: '/assets/pics/office3.png' , genre: "office", url: '/assets/vids/office3.mp4'},
-{id: 2, name: "Piada de toc toc", author: "Pablo Teixeira", views: "9122", img: '/assets/pics/office1.png' , genre: "office", url: '/assets/vids/office1.mp4'},
+{id: 1, name:  "Roubo de identidade não é uma piada", author: "Pablo Teixeira", views: "7654", img: '/assets/pics/office3.png' , genre: "office", url: '/assets/vids/office3.mp4'},
+{id: 2, name: "Piada toc-toc do Dwight", author: "Pablo Teixeira", views: "9122", img: '/assets/pics/office1.png' , genre: "office", url: '/assets/vids/office1.mp4'},
 {id: 3, name:  "Treinamento de atendimento", author: "Pablo Teixeira", views: "3455", img: '/assets/pics/office2.png' , genre: "office", url: '/assets/vids/office2.mp4' },
-{id: 4, name:  "Dwight salva Stanley", author: "Pablo Teixeira", views: "5644", img: '/assets/pics/office4.png' , genre: "office", url: '/assets/vids/office4.mp4'},
-{id: 5, name:  "Abertura The Office", author: "Pablo Teixeira", views: "5446", img: '/assets/pics/office5.png' , genre: "office", url: '/assets/vids/office5.mp4'},
+{id: 4, name:  "Dwight salva Stanley de veneno", author: "Pablo Teixeira", views: "5644", img: '/assets/pics/office4.png' , genre: "office", url: '/assets/vids/office4.mp4'},
+{id: 5, name:  "Video de abertura The Office", author: "Pablo Teixeira", views: "5446", img: '/assets/pics/office5.png' , genre: "office", url: '/assets/vids/office5.mp4'},
 {id: 6, name:  "Gato preso tentando se libertar", author: "Pablo Teixeira", views: "6566", img: '/assets/pics/cats1.png' , genre: "cats", url: '/assets/vids/cats1.mp4'},
 {id: 7, name:  "Brigando com o reflexo no espelho", author: "Pablo Teixeira", views: "5467", img: '/assets/pics/cats2.png' , genre: "cats", url: '/assets/vids/cats2.mp4'},
 {id: 8, name:  "Gato com medo de uma flor", author: "Pablo Teixeira", views: "8900", img: '/assets/pics/cats3.png' , genre: "cats", url: '/assets/vids/cats3.mp4'},

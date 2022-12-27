@@ -58,7 +58,7 @@ p {
 export const Right = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     width: 145px;
     height: 80px;
 
