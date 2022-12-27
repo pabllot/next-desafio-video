@@ -64,7 +64,7 @@ button {
 }
 
 .light {
-  background-color: #e7e0e0;
+  background-color: #ffffff;
 }
 
 .light button {

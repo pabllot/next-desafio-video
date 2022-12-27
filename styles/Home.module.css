@@ -11,9 +11,7 @@
 
 }
 
-.light {
-  background-color: rgb(75, 74, 74);
-}
+
 
 @media (max-width: 768px) {
   .main{

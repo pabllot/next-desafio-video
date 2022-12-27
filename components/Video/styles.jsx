@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 900px;
   height: 650px;
   
   .video-container {
     position: relative;
     display: flex;
-    width: 100%;
+    width: 900px;
     height: 100%;
     justify-content: center;
     margin-inline: auto;
@@ -24,7 +23,7 @@ export const Container = styled.div`
     width: 100%;
   }
   
-  .video-container.video-container.theater {
+  .video-container.theater {
     height: 82vh;
     width: 100vw;
   }
@@ -123,7 +122,8 @@ video {
   left: 0;}
   
   .light{    
-    background-color: #e4dbdbe6;
+    background-color: white;
+    opacity: 0.9;
   }
   
   @media (max-width: 1100px) {
