@@ -21,7 +21,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setT
   // modo teatro
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
-  //dar play no vídeo
+  //dar play no vídeo - usando useRef p acessar a DOM com o built-in methods de video play/pause
   const togglePlay = () => {
     isVideoPaused ? vidRef.current.play() : vidRef.current.pause();
     setIsVideoPaused(prev => !prev)

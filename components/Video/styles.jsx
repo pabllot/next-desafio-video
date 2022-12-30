@@ -28,10 +28,6 @@ export const Container = styled.div`
     width: 100vw;
   }
 
-.video-container.full-screen {
-  max-height: 100vh;
-}
-
 video {
   width: 100%;
 }
