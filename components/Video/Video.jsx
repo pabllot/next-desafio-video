@@ -7,7 +7,7 @@ import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
 import { CgScreenWide, CgScreen } from 'react-icons/cg'
 import { GoUnmute } from 'react-icons/go'
 
-export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setTheme}) => {
+export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(false)

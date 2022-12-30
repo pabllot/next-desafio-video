@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Left, Right } from './styles';
 
-export const SelectVideo = ({name, author, views, img, url, setChosenVideo, theme, setTheme}) => {
+export const SelectVideo = ({name, author, views, img, url, setChosenVideo, theme}) => {
   console.log(url)
   return (
     <Container onClick={()=>setChosenVideo(url)}>

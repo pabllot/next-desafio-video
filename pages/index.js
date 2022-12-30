@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${ theme ? styles.light : ''}`}>
-         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} theme={theme} setTheme={setTheme} />
+         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} theme={theme}/>
          {!isTheaterMode && <Sidebar setChosenVideo={setChosenVideo}  theme={theme} setTheme={setTheme} /> }
       </main>
     </>
