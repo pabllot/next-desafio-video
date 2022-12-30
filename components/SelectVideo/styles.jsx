@@ -8,51 +8,19 @@ align-items: center;
 justify-content: space-evenly;
 cursor: pointer;
 
-
 &:hover {
     background-color: #a2a0a039;
 }
 
-h3 {
-    color: #ffffffd6;
-    font-size: 15px;
-    margin: 0;   
-}
-
-p {
-    color: #ffffffd6;
-    font-size: 11px;
-    margin: 0;
-}
-
-
-.views {
-    font-size: 8px;
-}
 .color {
     color: black;
 }
 
 
-@media (max-width: 1024px) {
-  width: 320px;
-  height: 94px;
-}
-
-@media (max-width: 768px) {
-  width: 100%;
-  height: 18%;
-}
-
-@media (max-width: 620px) {
-  width: 90%;
-  height: 18%;
-}
-
-@media (max-width: 350px) {
-  width: 90%;
-  height: 18%;
-}
+@media (max-width: 1024px) { width: 320px; height: 94px}
+@media (max-width: 768px) { width: 100%; height: 18%}
+@media (max-width: 620px) {width: 90%;  height: 18%}
+@media (max-width: 350px) { width: 90%; height: 18%}
 
 `
 export const Right = styled.div`
@@ -62,20 +30,9 @@ export const Right = styled.div`
     width: 145px;
     height: 80px;
 
-@media (max-width: 768px) {
-    height: 85%;
-    width: 50%;
-}
-
-@media (max-width: 620px) {
-    height: 85%;
-    width: 50%; 
-}
-
-@media (max-width: 350px) {
-    width: 50%;
-    height: 85%;
-}
+    @media (max-width: 768px) {height: 85%; width: 50%}
+    @media (max-width: 620px) {height: 85%; width: 50%}
+    @media (max-width: 350px) {width: 50%; height: 85%}
 `
 
 export const Left = styled.img`
@@ -83,22 +40,25 @@ export const Left = styled.img`
     height: 80px;
     border-radius: 4px;
 
-  @media (max-width: 1024px) {
-    width: 125px
-}
-
-@media (max-width: 768px) {
-    height: 85%;
-    width: 33%;
-}
-
-@media (max-width: 620px) {
-    height: 85%;
-    width: 45%;
-}
-
-@media (max-width: 350px) {
-    width: 40%;
-    height: 85%;
-}
+    @media (max-width: 1024px) {width: 125px}
+    @media (max-width: 768px) {height: 85%; width: 33%}
+    @media (max-width: 620px) { height: 85%; width: 45%}
+    @media (max-width: 350px) {width: 40%; height: 85%}
  `
+
+ export const Title = styled.div`
+    color: #ffffffd6;
+    font-size: 15px;
+    margin: 0;   
+
+`
+ export const Author = styled.p`
+    color: #ffffffd6;
+    font-size: 11px;
+    margin: 0;
+`
+ export const Views = styled.p`
+    color: #ffffffd6;
+    font-size: 8px;
+    margin: 0;
+`

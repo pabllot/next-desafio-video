@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Left, Right } from './styles';
+import { Container, Left, Right, Title, Author, Views } from './styles';
 
 export const SelectVideo = ({name, author, views, img, url, setChosenVideo, theme}) => {
 
@@ -7,10 +7,10 @@ export const SelectVideo = ({name, author, views, img, url, setChosenVideo, them
     <Container onClick={()=>setChosenVideo(url)}>
         <Left src={img} className='left'/>
         <Right>
-          <h3 className={`${theme ? 'color' : ''}`}>{name}</h3>
+          <Title>{name}</Title>
           <div>
-            <p className={`${theme ? 'color' : ''}`}>{author}</p>
-            <p className={`view ${theme ? 'color' : ''}`}>{views} views</p>
+            <Author>{author}</Author>
+            <Views>{views} views</Views>
           </div>
         </Right>
     </Container>
