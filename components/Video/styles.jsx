@@ -65,9 +65,10 @@ video {
   transition: opacity 150ms ease-in-out;
 
 }
-.no{
+.notShowing{
   opacity: 0;
 }
+
 .video-controls-container .controls {
   display: flex;
   gap: .5rem;

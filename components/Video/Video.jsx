@@ -10,7 +10,7 @@ import { GoUnmute } from 'react-icons/go'
 export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setTheme}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
   const [isFullScreen, setIsFullScreen] = useState(true)
-  const [isMute, setIsMute] = useState(true)
+  const [isMute, setIsMute] = useState(false)
   const [duration, setDuration] = useState(null)
   const [currentTime, setCurrentTime] = useState('0:00')
   const [speed, setSpeed] = useState(1)
@@ -30,9 +30,17 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setT
   //mutar vídeo
   const toggleMute = () => {
     setIsMute(prev => !prev)
-    isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1;
-    isMute ? volumeRef.current.value = 0 : volumeRef.current.value = 1
+    !isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1;
+    !isMute ? volumeRef.current.value = 0 : volumeRef.current.value = 1
     }
+
+    // ajustar volume de acordo com a barrinha 
+    const  handleRange= (e)=>{
+      if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(true);
+      else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(false)
+      else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(false)
+      else vidRef.current.volume = 1
+      }
 
   // tela cheia
   const toggleFullScreen = () => {
@@ -46,17 +54,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setT
     setIsVideoPaused(true)
   },[chosenVideo])
 
-
-  // ajustar volume de acordo com a barrinha
-  const  handleRange= (e)=>{
-    if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(false);
-    else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(true)
-    else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(true)
-    else vidRef.current.volume = 1
-    }
-
-
-  // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 01:3.
+  // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 1:3.
   const startWithZero = new Intl.NumberFormat(undefined, {
     minimumIntegerDigits: 2,
     })
@@ -88,15 +86,15 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setT
   return (
     <Container>
       <div ref={fullScreenRef} className={`video-container ${isVideoPaused ? 'paused' : ''}  ${isTheaterMode ? "theater" : ""} ${theme ? 'light' : ''}`}>
-        <div className={`progress ${!isVideoPaused ? 'no' : ''}`} style={{width: `${width}%`}}></div>
+        <div className={`progress ${!isVideoPaused ? 'notShowing' : ''}`} style={{width: `${width}%`}}></div>
         <div className='video-controls-container'>
           <div className="timeline-container"></div>
           <div className="controls">
             <button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</button>
 
             <div className='volume-container'>
-              <button onClick={toggleMute}>{isMute ? <GoUnmute /> : <MdVolumeOff />}</button>
-              <input ref={volumeRef} onInput={(e) => handleRange(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'></input>
+              <button onClick={toggleMute}>{!isMute ? <GoUnmute /> : <MdVolumeOff />}</button>
+              <input ref={volumeRef} onInput={(e) => handleRange(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'/>
             </div>
 
             <div className='duration-container'>
