@@ -5,7 +5,7 @@ export const SelectVideo = ({name, author, views, img, url, setChosenVideo, them
 
   return (
     <Container onClick={()=>setChosenVideo(url)}>
-        <Left src={img} className='left'/>
+        <Left src={img}/>
         <Right>
           <Title>{name}</Title>
           <div>

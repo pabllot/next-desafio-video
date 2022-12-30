@@ -5,6 +5,10 @@ export const Container = styled.div`
   align-items: center;
   height: 650px;
   
+  video {
+    width: 100%;
+  }
+
 .video-container {
   position: relative;
   display: flex;
@@ -21,109 +25,6 @@ export const Container = styled.div`
   width: 100vw;
 }
 
-video {
-  width: 100%;
-}
-
-.video-controls-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: white;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-  background-color: rgba(38, 37, 37, 0.438);
-  border-top: 4px solid rgb(198, 192, 192);
-}
-
-.video-container:hover .video-controls-container,
-.video-container.paused .video-controls-container{
-  opacity: 1;
-}
-
-.video-container:hover .progress {
-  opacity: 1;
-}
-
-.progress {
-  height: 4px;
-  background: red;
-  position: absolute;
-  z-index: 999;
-  bottom: 38px;
-  left: 0;
-  opacity: 1;
-  transition: opacity 150ms ease-in-out;
-
-}
-.notShowing{
-  opacity: 0;
-}
-
-.video-controls-container .controls {
-  display: flex;
-  gap: .5rem;
-  padding: .25rem;
-  align-items: center;
-}
-
-.video-controls-container .controls button,
-.video-controls-container .controls svg {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  opacity: .9;
-  transition: opacity 150ms ease-in-out;
-  outline: none;
-}
-
-.video-controls-container .controls button:hover,
-.video-controls-container .controls svg:hover {
-  opacity: 1;
-}
-
-.volume-container {
-  display: flex;
-  align-items: center;
-}
-
-.volume-slider {
-  width: 0;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
-  margin-left: 1rem;
-}
-
-.volume-container:hover .volume-slider{
-  width: 100px;
-  transform: scaleX(1);
-}
-
-.duration-container {
-  display: flex;
-  align-items: center;
-  gap: .25rem;
-  flex-grow: 1;
-}
-
-.wider-btn {
-  width: 50px;
-  margin-right: 10px;
-  font-weight: 500;
-}
-  
-.light{    
-  background-color: white;
-  opacity: 0.9;
-}
   
   @media (max-width: 1100px) {
     width: 1024px;
@@ -164,3 +65,121 @@ video {
 
 
 `
+
+export const VideoControlsContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 100;
+  opacity: 1; ////é zero, mudar dps
+  transition: opacity 150ms ease-in-out;
+  background-color: rgba(38, 37, 37, 0.438);
+  border-top: 4px solid rgb(198, 192, 192);
+`
+
+export const VolumeContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  &:hover .volume-slider {
+    width: 100px;
+    transform: scaleX(1);
+  }
+`
+export const Button = styled.button`
+background: none;
+border: none;
+color: inherit;
+padding: 0;
+height: 30px;
+width: 30px;
+font-size: 1.1rem;
+cursor: pointer;
+opacity: .9;
+transition: opacity 150ms ease-in-out;
+outline: none;
+
+&hover {
+  opacity: 1;
+}
+
+`
+export const SpeedButton = styled.button`
+background: none;
+border: none;
+color: inherit;
+padding: 0;
+height: 30px;
+width: 50px;
+font-size: 1.1rem;
+cursor: pointer;
+opacity: .9;
+transition: opacity 150ms ease-in-out;
+outline: none;
+margin-right: 10px;
+font-weight: 500;
+
+
+
+&hover {
+  opacity: 1;
+}
+
+
+`
+export const Controls = styled.div`
+  display: flex;
+  gap: .5rem;
+  padding: .25rem;
+  align-items: center;
+
+  svg {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: .9;
+  transition: opacity 150ms ease-in-out;
+  outline: none;
+
+  &:hover {
+    opacity: 1;
+  }
+  }
+`
+
+export const DurationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  flex-grow: 1;
+`
+
+export const VolumeSlider = styled.input`
+  width: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
+  margin-left: 1rem;
+`
+export const Progress = styled.div`
+  height: 4px;
+  background: red;
+  position: absolute;
+  z-index: 999;
+  bottom: 38px;
+  left: 0;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+
+.notShowing{
+  opacity: 0;
+}
+`
+

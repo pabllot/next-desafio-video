@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { Container } from './styles';
+import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
 
 import { IoMdPlay, IoMdPause } from 'react-icons/io'
 import { MdVolumeOff } from 'react-icons/md'
@@ -85,28 +85,26 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
 
   return (
     <Container>
-      <div ref={fullScreenRef} className={`video-container ${isVideoPaused ? 'paused' : ''}  ${isTheaterMode ? "theater" : ""} `}>
-        <div className={`progress ${!isVideoPaused ? 'notShowing' : ''}`} style={{width: `${width}%`}}></div>
-        <div className='video-controls-container'>
-          <div className="timeline-container"></div>
-          <div className="controls">
-            <button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</button>
+      <div ref={fullScreenRef} className={`video-container   ${isTheaterMode ? "theater" : ""} `}>
+        <Progress style={{width: `${width}%`}}></Progress>
+        <VideoControlsContainer>
+          <Controls>
+            <Button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</Button>
+            <VolumeContainer>
+              <Button onClick={toggleMute}>{!isMute ? <GoUnmute /> : <MdVolumeOff />}</Button>
+              <VolumeSlider ref={volumeRef} onInput={(e) => handleRange(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'/>
+            </VolumeContainer>
 
-            <div className='volume-container'>
-              <button onClick={toggleMute}>{!isMute ? <GoUnmute /> : <MdVolumeOff />}</button>
-              <input ref={volumeRef} onInput={(e) => handleRange(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'/>
-            </div>
+            <DurationContainer>
+              <div>{currentTime}</div>/
+              <div>{duration}</div>
+            </DurationContainer>
 
-            <div className='duration-container'>
-              <div className='current-time'>{currentTime}</div>/
-              <div className='total-time'>{duration}</div>
-            </div>
-
-            <button onClick={changeSpeed} className='speed-btn wider-btn'>{speed}x</button>
-            <button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide/> : <CgScreen />}</button>
-            <button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</button>
-          </div>
-        </div>
+            <SpeedButton onClick={changeSpeed}>{speed}x</SpeedButton>
+            <Button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide/> : <CgScreen />}</Button>
+            <Button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</Button>
+          </Controls>
+        </VideoControlsContainer>
         <video ref={vidRef} onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} 
         src={chosenVideo} loop type='video/mp4'></video>
       </div>

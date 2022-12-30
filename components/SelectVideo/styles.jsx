@@ -61,4 +61,5 @@ export const Left = styled.img`
     color: #ffffffd6;
     font-size: 8px;
     margin: 0;
+
 `
