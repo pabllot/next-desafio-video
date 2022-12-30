@@ -17,12 +17,6 @@ export const Container = styled.div`
   }
   
   
-  .video-container.theater, 
-  .video-container.full-screen {
-    max-width: initial;
-    width: 100%;
-  }
-  
   .video-container.theater {
     height: 82vh;
     width: 100vw;
@@ -138,7 +132,7 @@ video {
   }
   
   @media (max-width: 1100px) {
-    width: 680px;
+    width: 1024px;
     height: 580px;
     .video-container {
       width: 100%;
@@ -152,7 +146,6 @@ video {
     .video-container {
       width: 70vw;    
       height: 100%;
-      border-top-right-radius: 10px;
       border-bottom-left-radius: 0;      
     }    
   }
@@ -162,7 +155,6 @@ video {
     .video-container {
       width: 80vw;
       height: 100%;
-      border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
     }   
   }
@@ -172,7 +164,6 @@ video {
     .video-container {
       height: 100%;
       width: 100vw;    
-      border-top-right-radius: 10px;
       border-bottom-left-radius: 0;
     }
   }

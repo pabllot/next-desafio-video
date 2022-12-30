@@ -88,7 +88,7 @@ svg {
 }
 
 @media (max-width: 1100px) {
-  width: 320px;
+  width: 420px;
   height: 580px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
@@ -99,12 +99,25 @@ svg {
   .sidebar {
     height: 100%;
   }
+
+  button {
+  width: 39px;
+  height: 20px;
+  font-size: 13px;
+
+}
+
+.office {
+  font-size: 12.5px;
+  width: 60px;
+}
+
 }
 
 @media (max-width: 768px) {
   width: 70vw;
   border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
   height: 70%;
   .filter {
     width: 100%;
@@ -113,15 +126,24 @@ svg {
   .sidebar {
     width: 100vw;
     height: 100%;
-
-
   }
+
+  button {
+  font-size: 14px;
+  width: 60px;
+  height: 20px;
+}
+
+.office {
+  font-size: 12.5px;
+  width: 80px;
+}
 }
 
 @media (max-width: 620px) {
   width: 100vw;
   border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
   height: 70%;
   .filter {
     width: 100%;
@@ -130,14 +152,13 @@ svg {
   .sidebar {
     width: 80vw;
     height: 100%;
-
-
   }
+
 }
 
 @media (max-width: 450px) {
   border-top-right-radius: 0px;
-  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
   height: 70%;
   .filter {
     width: 100%;
@@ -149,6 +170,17 @@ svg {
     height: 100%;
 
   }
+
+  button {
+  font-size: 14px;
+  width: 54px;
+  height: 20px;
+}
+
+.office {
+  font-size: 13px;
+  width: 70px;
+}
 }
 
 
