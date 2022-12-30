@@ -5,22 +5,21 @@ export const Container = styled.div`
   align-items: center;
   height: 650px;
   
-  .video-container {
-    position: relative;
-    display: flex;
-    width: 900px;
-    height: 100%;
-    justify-content: center;
-    margin-inline: auto;
-    overflow: hidden;
-    background-color: black;
-  }
-  
-  
-  .video-container.theater {
-    height: 82vh;
-    width: 100vw;
-  }
+.video-container {
+  position: relative;
+  display: flex;
+  width: 900px;
+  height: 100%;
+  justify-content: center;
+  margin-inline: auto;
+  overflow: hidden;
+  background-color: black;
+}
+
+.video-container.theater {
+  height: 82vh;
+  width: 100vw;
+}
 
 video {
   width: 100%;
@@ -90,8 +89,6 @@ video {
   opacity: 1;
 }
 
-
-
 .volume-container {
   display: flex;
   align-items: center;
@@ -122,14 +119,11 @@ video {
   margin-right: 10px;
   font-weight: 500;
 }
-
-
-
   
-  .light{    
-    background-color: white;
-    opacity: 0.9;
-  }
+.light{    
+  background-color: white;
+  opacity: 0.9;
+}
   
   @media (max-width: 1100px) {
     width: 1024px;
