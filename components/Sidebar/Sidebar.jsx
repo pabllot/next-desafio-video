@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { SelectVideo } from '../SelectVideo/SelectVideo'
-import { Container } from './styles';
+import { Container, Sidebarr, Filter, Button, LargeButton, Icon } from './styles';
 import { vids } from '../Database/Data'
 import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
@@ -21,20 +21,20 @@ export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
 
   return (
     <Container >
-        <div className={`sidebar ${theme ? 'light' : ''}`}>
-          <div className={`filter ${theme ? 'light' : ''}`}> 
-            <button className={`button office ${theme ? 'light' : ''}`} onClick={()=>setFilter('office')}>The Office</button>
-            <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('cats')}>Cats</button>
-            <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('dogs')}>Dogs</button>
-            <button className={`button ${theme ? 'light' : ''}`} onClick={()=>setFilter('kids')}>Kids</button>
-            <div className={`icon ${theme ? 'light' : ''}`}onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</div>
-          </div>
+        <Sidebarr>
+          <Filter> 
+            <LargeButton onClick={()=>setFilter('office')}>The Office</LargeButton>
+            <Button onClick={()=>setFilter('cats')}>Cats</Button>
+            <Button onClick={()=>setFilter('dogs')}>Dogs</Button>
+            <Button onClick={()=>setFilter('kids')}>Kids</Button>
+            <Icon onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</Icon>
+          </Filter>
 
        {filteredVids.slice(0, 5).map(item=><SelectVideo theme={theme} setChosenVideo={setChosenVideo} url={item.url}
         key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
  
-      </div>
+      </Sidebarr>
     </Container>
   )
 }
