@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
 import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
-
 import { IoMdPlay, IoMdPause } from 'react-icons/io'
 import { MdVolumeOff } from 'react-icons/md'
 import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
@@ -34,13 +33,13 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
     !isMute ? volumeRef.current.value = 0 : volumeRef.current.value = 1
     }
 
-    // ajustar volume de acordo com a barrinha 
-    const  handleRange= (e)=>{
-      if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(true);
-      else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(false)
-      else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(false)
-      else vidRef.current.volume = 1
-      }
+  // ajustar volume de acordo com a barrinha 
+  const  handleRange= (e)=>{
+    if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(true);
+    else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(false)
+    else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(false)
+    else vidRef.current.volume = 1
+    }
 
   // tela cheia
   const toggleFullScreen = () => {
@@ -89,6 +88,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
         <Progress style={{width: `${width}%`}}></Progress>
         <VideoControlsContainer>
           <Controls>
+            
             <Button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</Button>
             <VolumeContainer>
               <Button onClick={toggleMute}>{!isMute ? <GoUnmute /> : <MdVolumeOff />}</Button>
@@ -103,10 +103,17 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
             <SpeedButton onClick={changeSpeed}>{speed}x</SpeedButton>
             <Button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide/> : <CgScreen />}</Button>
             <Button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</Button>
+
           </Controls>
         </VideoControlsContainer>
-        <video ref={vidRef} onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} 
-        src={chosenVideo} loop type='video/mp4'></video>
+        <video 
+          ref={vidRef} 
+          onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} 
+          onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} 
+          src={chosenVideo} 
+          type='video/mp4'
+          loop 
+          />
       </div>
     </Container>
   )
