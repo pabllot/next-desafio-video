@@ -90,8 +90,9 @@ svg {
 @media (max-width: 1100px) {
   width: 420px;
   height: 580px;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   .filter {
     width: 90%;
   }
