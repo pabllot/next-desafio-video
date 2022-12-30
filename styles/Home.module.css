@@ -11,6 +11,10 @@
 
 }
 
+.light {
+  background-color: rgba(227, 214, 214, 0.893);
+}
+
 
 
 @media (max-width: 768px) {
