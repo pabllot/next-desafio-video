@@ -66,6 +66,8 @@ video {
   bottom: 38px;
   left: 0;
   opacity: 1;
+  transition: opacity 150ms ease-in-out;
+
 }
 .no{
   opacity: 0;
