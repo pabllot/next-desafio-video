@@ -87,8 +87,8 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme, setT
 
   return (
     <Container>
-      <div ref={fullScreenRef} className={`video-container paused  ${isTheaterMode ? "theater" : ""} ${theme ? 'light' : ''}`}>
-        <div className='progress' style={{width: `${width}%`}}></div>
+      <div ref={fullScreenRef} onClick={togglePlay} className={`video-container ${isVideoPaused ? 'paused' : ''}  ${isTheaterMode ? "theater" : ""} ${theme ? 'light' : ''}`}>
+        <div className={`progress ${!isVideoPaused ? 'no' : ''}`} style={{width: `${width}%`}}></div>
         <div className='video-controls-container'>
           <div className="timeline-container"></div>
           <div className="controls">

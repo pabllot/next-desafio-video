@@ -50,11 +50,26 @@ video {
 }
 
 .video-container:hover .video-controls-container,
-.video-container:focus-within .video-controls-container,
-.video-container.paused .video-controls-container {
+.video-container.paused .video-controls-container{
   opacity: 1;
 }
 
+.video-container:hover .progress {
+  opacity: 1;
+}
+
+.progress {
+  height: 4px;
+  background: red;
+  position: absolute;
+  z-index: 999;
+  bottom: 38px;
+  left: 0;
+  opacity: 1;
+}
+.no{
+  opacity: 0;
+}
 .video-controls-container .controls {
   display: flex;
   gap: .5rem;
@@ -81,6 +96,8 @@ video {
 .video-controls-container .controls svg:hover {
   opacity: 1;
 }
+
+
 
 .volume-container {
   display: flex;
@@ -113,13 +130,8 @@ video {
   font-weight: 500;
 }
 
-.progress {
-  height: 4px;
-  background: red;
-  position: absolute;
-  z-index: 999;
-  bottom: 38px;
-  left: 0;}
+
+
   
   .light{    
     background-color: white;
