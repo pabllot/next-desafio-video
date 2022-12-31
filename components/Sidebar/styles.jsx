@@ -129,7 +129,7 @@ export const LargeButton = styled.button`
 }
 
    @media (max-width: 1100px) {  width: 60px; height: 20px; font-size: 12.5px;}
-   @media (max-width: 768px) { font-size: 14px;  width: 60px;  height: 20px;}
+   @media (max-width: 768px) { font-size: 14px;  width: 70px;  height: 20px;}
    @media (max-width: 450px) {font-size: 13px;  width: 70px;  height: 20px;}
 
 `
