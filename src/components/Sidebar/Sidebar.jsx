@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { SelectVideo } from '../SelectVideo/SelectVideo'
 import { Container, Sidebarr, Filter, Button, LargeButton, Icon } from './styles';
-import { vids } from '../../../data/data.json'
 import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
 
-export const Sidebar = ({setChosenVideo, toggleTheme, theme }) => {
+export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
   const [filter, setFilter] = useState('office');
   const [filteredVids, setFilteredVids] = useState([]);
 
@@ -13,8 +12,8 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme }) => {
   // vai filtrar todos os videos do db e retornar somente os que tem o mesmo genero, 
   useEffect(()=>{
     setFilteredVids([])
-      for(let i = 0; i < vids.length; i++){
-        if(vids[i].genre === filter) setFilteredVids(prev => [...prev, vids[i]])  
+      for(let i = 0; i < data.length; i++){
+        if(data[i].genre === filter) setFilteredVids(prev => [...prev, data[i]])  
     }
   },[filter])
 
@@ -39,3 +38,12 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme }) => {
   )
 }
 
+export async function getServerSideProps() {
+  const { vids } = await import ('../../../data/data.json');
+  console.log(vids)
+  return {
+    props: {
+      data: vids
+    }, 
+  }
+}

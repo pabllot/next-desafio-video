@@ -2,7 +2,6 @@ import  React, { useState } from 'react'
 import Head from 'next/head'
 import { Sidebar } from '../src/components/Sidebar/Sidebar'
 import { Video } from '../src/components/Video/Video'
-import { vids } from '../data/data.json'
 
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
@@ -10,9 +9,9 @@ import dark from '../styles/themes/dark'
 import light from '../styles/themes/light'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({data}) {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
-  const [chosenVideo, setChosenVideo] = useState(vids[0].url);
+  const [chosenVideo, setChosenVideo] = useState(data[0].url);
   const [theme, setTheme] = useState(dark);
   const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light);
 
@@ -28,8 +27,17 @@ export default function Home() {
       <GlobalStyle />
       <main className={`${styles.main} ${ theme ? styles.light : ''}`}>
          <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo}/>
-         {!isTheaterMode && <Sidebar setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} /> }
+         {!isTheaterMode && <Sidebar data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} /> }
       </main>
     </ThemeProvider>
   )
+}
+
+export async function getServerSideProps() {
+  const { vids } = await import ('../data/data.json');
+  return {
+    props: {
+      data: vids
+    }, 
+  }
 }
