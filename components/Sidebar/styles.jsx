@@ -19,13 +19,13 @@ overflow: hidden;
 }
 
 @media (max-width: 768px) {
-  width: 70vw;
+  width: 50vw;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   height: 70%;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 550px) {
   width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;

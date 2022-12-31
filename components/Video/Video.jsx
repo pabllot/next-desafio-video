@@ -1,12 +1,12 @@
+import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoContainer, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
 import { useState, useRef, useEffect } from 'react'
-import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
 import { IoMdPlay, IoMdPause } from 'react-icons/io'
 import { MdVolumeOff } from 'react-icons/md'
 import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
 import { CgScreenWide, CgScreen } from 'react-icons/cg'
 import { GoUnmute } from 'react-icons/go'
 
-export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => {
+export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(false)
@@ -84,8 +84,8 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
 
   return (
     <Container>
-      <div ref={fullScreenRef} className={`video-container   ${isTheaterMode ? "theater" : ""} `}>
-        <Progress style={{width: `${width}%`}}></Progress>
+      <VideoContainer isTheaterMode={isTheaterMode} ref={fullScreenRef}>
+        <Progress style={{width: `${width}%`}}/>
         <VideoControlsContainer>
           <Controls>
             
@@ -114,7 +114,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo, theme}) => 
           type='video/mp4'
           loop 
           />
-      </div>
+      </VideoContainer>
     </Container>
   )
 }

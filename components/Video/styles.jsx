@@ -5,65 +5,43 @@ export const Container = styled.div`
   align-items: center;
   height: 650px;
   
-  video {
-    width: 100%;
-  }
+  video { width: 100% }  
 
-.video-container {
+  @media (max-width: 1100px) { width: 1024px;height: 580px }  
+  @media (max-width: 768px) { height: 30% }  
+  @media (max-width: 620px) { height: 30% }  
+  @media (max-width: 450px) { height: 30% }
+`
+
+export const VideoContainer = styled.div` 
   position: relative;
   display: flex;
-  width: 900px;
-  height: 100%;
+  width: ${(props) => (props.isTheaterMode ? '100vw' : '900px')};
+  height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
   justify-content: center;
   margin-inline: auto;
   overflow: hidden;
   background-color: black;
-}
 
-.video-container.theater {
-  height: 82vh;
-  width: 100vw;
-}
+  @media (max-width: 1100px) { width: 100%; height: 100% }
 
-  
-  @media (max-width: 1100px) {
-    width: 1024px;
-    height: 580px;
-    .video-container {
-      width: 100%;
-      height: 100%;
-    }
+  @media (max-width: 768px) { 
+    width: ${(props) => (props.isTheaterMode ? '100vw' : '50vw')};
+    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
+    border-bottom-left-radius: 0 
   }
-  
-  @media (max-width: 768px) {
-    height: 30%;
-    
-    .video-container {
-      width: 70vw;    
-      height: 100%;
-      border-bottom-left-radius: 0;      
-    }    
-  }
-  
-  @media (max-width: 620px) {
-    height: 30%;
-    .video-container {
-      width: 80vw;
-      height: 100%;
-      border-bottom-left-radius: 0;
-    }   
-  }
+
+  @media (max-width: 550px) { 
+    width: 80vw;
+    height: 100%; 
+    border-bottom-left-radius: 0
+   }
   
   @media (max-width: 450px) {
-    height: 30%;
-    .video-container {
-      height: 100%;
-      width: 100vw;    
-      border-bottom-left-radius: 0;
-    }
+    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
+    width: 100vw; 
+    border-bottom-left-radius: 0 
   }
-
-
 `
 
 export const VideoControlsContainer = styled.div`
