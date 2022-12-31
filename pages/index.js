@@ -2,7 +2,7 @@ import  React, { useState } from 'react'
 import Head from 'next/head'
 import { Sidebar } from '../src/components/Sidebar/Sidebar'
 import { Video } from '../src/components/Video/Video'
-import { vids } from '../data/Data'
+import { vids } from '../data/data.json'
 
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
