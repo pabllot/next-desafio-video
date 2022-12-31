@@ -84,9 +84,9 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
 
   return (
     <Container>
-      <VideoContainer isTheaterMode={isTheaterMode} ref={fullScreenRef}>
-        <Progress style={{width: `${width}%`}}/>
-        <VideoControlsContainer>
+      <VideoContainer isTheaterMode={isTheaterMode}  ref={fullScreenRef}>
+        <Progress isVideoPaused={isVideoPaused} style={{width: `${width}%`}}/>
+        <VideoControlsContainer isVideoPaused={isVideoPaused}>
           <Controls>
             
             <Button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</Button>

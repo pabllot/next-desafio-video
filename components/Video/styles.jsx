@@ -12,7 +12,30 @@ export const Container = styled.div`
   @media (max-width: 620px) { height: 30% }  
   @media (max-width: 450px) { height: 30% }
 `
+export const VideoControlsContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 100;
+  transition: opacity 150ms ease-in-out;
+  background-color: rgba(38, 37, 37, 0.438);
+  border-top: 4px solid rgb(198, 192, 192);
+  opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};
+  
+`
 
+export const Progress = styled.div`
+  height: 4px;
+  background: red;
+  position: absolute;
+  z-index: 999;
+  bottom: 38px;
+  left: 0;
+  opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};
+  transition: opacity 150ms ease-in-out;
+`
 export const VideoContainer = styled.div` 
   position: relative;
   display: flex;
@@ -22,6 +45,15 @@ export const VideoContainer = styled.div`
   margin-inline: auto;
   overflow: hidden;
   background-color: black;
+
+  &:hover ${VideoControlsContainer}{
+    opacity: 1;
+  }
+
+  &:hover ${Progress}{
+    opacity: 1;
+  }
+  
 
   @media (max-width: 1100px) { width: 100%; height: 100% }
 
@@ -42,19 +74,6 @@ export const VideoContainer = styled.div`
     width: 100vw; 
     border-bottom-left-radius: 0 
   }
-`
-
-export const VideoControlsContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: white;
-  z-index: 100;
-  opacity: 1; ////é zero, mudar dps
-  transition: opacity 150ms ease-in-out;
-  background-color: rgba(38, 37, 37, 0.438);
-  border-top: 4px solid rgb(198, 192, 192);
 `
 
 export const VolumeContainer = styled.div`
@@ -98,8 +117,6 @@ transition: opacity 150ms ease-in-out;
 outline: none;
 margin-right: 10px;
 font-weight: 500;
-
-
 
 &hover {
   opacity: 1;
@@ -146,18 +163,5 @@ export const VolumeSlider = styled.input`
   transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
   margin-left: 1rem;
 `
-export const Progress = styled.div`
-  height: 4px;
-  background: red;
-  position: absolute;
-  z-index: 999;
-  bottom: 38px;
-  left: 0;
-  opacity: 1;
-  transition: opacity 150ms ease-in-out;
 
-.notShowing{
-  opacity: 0;
-}
-`
 
