@@ -1,23 +1,20 @@
+import  React, { useState } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { Sidebar } from '../components/Sidebar/Sidebar'
 import { Video } from '../components/Video/Video'
-import  React from 'react'
-import {useState} from 'react'
 import { vids } from '../components/Database/Data'
-import GlobalStyle from '../styles/global'
+
 import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/global'
 import dark from '../styles/themes/dark'
 import light from '../styles/themes/light'
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
   const [chosenVideo, setChosenVideo] = useState(vids[0].url);
-  const [theme, setTheme] = useState(dark)
-
-  const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light)
-  };
+  const [theme, setTheme] = useState(dark);
+  const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light);
 
   return (
     <ThemeProvider theme={theme}>

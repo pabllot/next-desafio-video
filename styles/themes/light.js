@@ -8,6 +8,5 @@ export default {
         icon: '#4936b2',
         button: '#877d7dcc',
         buttonCLicked: '#575151'
-
     }
 }
