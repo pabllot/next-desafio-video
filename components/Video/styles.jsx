@@ -31,13 +31,13 @@ export const VideoContainer = styled.div`
     border-bottom-left-radius: 0 
   }
 
-  @media (max-width: 550px) { 
+  @media (max-width: 660px) { 
     width: 80vw;
     height: 100%; 
     border-bottom-left-radius: 0
    }
   
-  @media (max-width: 450px) {
+  @media (max-width: 380px) {
     height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
     width: 100vw; 
     border-bottom-left-radius: 0 

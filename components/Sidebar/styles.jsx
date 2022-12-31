@@ -25,15 +25,16 @@ overflow: hidden;
   height: 70%;
 }
 
-@media (max-width: 550px) {
-  width: 100vw;
+@media (max-width: 660px) {
+  width: 80vw;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   height: 70%;
  
 }
 
-@media (max-width: 450px) {
+@media (max-width: 380px) {
+  width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   height: 70%;
