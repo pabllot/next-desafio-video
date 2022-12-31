@@ -9,7 +9,7 @@ justify-content: space-evenly;
 cursor: pointer;
 
 &:hover {
-    background-color: #a2a0a039;
+    background-color: #a2a0a047;
 }
 
 @media (max-width: 1024px) { width: 320px; height: 94px}
