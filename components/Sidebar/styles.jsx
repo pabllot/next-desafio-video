@@ -9,18 +9,6 @@ border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
 overflow: hidden;
 
-
-.light {
-  background-color: #ffffff;
-}
-
-.light button {
-  color: #201f1fda;
-  background-color: #a29b9b9b;
-  
-}
-
-
 @media (max-width: 1100px) {
   width: 420px;
   height: 580px;
@@ -60,7 +48,7 @@ export const Sidebarr = styled.div`
   width: 100%;
   height: 100%;
   margin-inline: auto;    
-  background: #000000e2;
+  background: ${props => props.theme.colors.primary};
 
   @media (max-width: 1100px){ height: 100%}
   @media (max-width: 768px) { width: 100vw;    height: 100%;}
@@ -84,9 +72,9 @@ export const Filter = styled.div`
 `
 
 export const Button = styled.button`
-  background-color: #877d7dcc;
+  background-color: ${props => props.theme.colors.button};
   border-radius: 5px;
-  color: #ffececdf;
+  color: ${props => props.theme.colors.secondary};
   cursor: pointer;
   border: none;
   outline: none;
@@ -100,13 +88,13 @@ export const Button = styled.button`
   height: 20px;
 
   &:focus {
-  background-color: #1d1a1a;
+  background-color:${props => props.theme.colors.buttonCLicked};
   color: white;
+
 }
 
   &:active {
   background-color: #6a6969af;
-  color: #ffffff;
 }
 
    @media (max-width: 1100px) {  width: 39px; height: 20px; font-size: 13px;}
@@ -115,9 +103,9 @@ export const Button = styled.button`
 
 `
 export const LargeButton = styled.button`
-  background-color: #877d7dcc;
+  background-color: ${props => props.theme.colors.button};
   border-radius: 5px;
-  color: #ffececdf;
+  color: ${props => props.theme.colors.secondary};
   cursor: pointer;
   border: none;
   outline: none;
@@ -131,13 +119,13 @@ export const LargeButton = styled.button`
   height: 20px;
 
   &:focus {
-  background-color: #1d1a1a;
+  background-color:${props => props.theme.colors.buttonCLicked};
   color: white;
+
 }
 
   &:active {
   background-color: #6a6969af;
-  color: #ffffff;
 }
 
    @media (max-width: 1100px) {  width: 60px; height: 20px; font-size: 12.5px;}
@@ -152,19 +140,10 @@ export const Icon = styled.div`
   cursor: pointer;
 
   svg {
-  color: #f6d33a;
+  color: ${props => props.theme.colors.icon}
   }
-
-
-  .light svg {
-    color: #061869
-  }
-
 
 `
-
-
-
 
  // @media (max-width: 1100px) {}
  // @media (max-width: 768px) {}

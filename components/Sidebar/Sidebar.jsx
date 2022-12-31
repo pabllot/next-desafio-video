@@ -5,7 +5,7 @@ import { vids } from '../Database/Data'
 import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
 
-export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
+export const Sidebar = ({setChosenVideo, toggleTheme, theme }) => {
   const [filter, setFilter] = useState('office');
   const [filteredVids, setFilteredVids] = useState([]);
 
@@ -27,7 +27,7 @@ export const Sidebar = ({setChosenVideo, theme, setTheme }) => {
             <Button onClick={()=>setFilter('cats')}>Cats</Button>
             <Button onClick={()=>setFilter('dogs')}>Dogs</Button>
             <Button onClick={()=>setFilter('kids')}>Kids</Button>
-            {/*<Icon onClick={()=>setTheme(prev => !prev)}>{theme ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
+            <Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>
           </Filter>
 
        {filteredVids.slice(0, 5).map(item=><SelectVideo theme={theme} setChosenVideo={setChosenVideo} url={item.url}

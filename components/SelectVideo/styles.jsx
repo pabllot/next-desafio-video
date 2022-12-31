@@ -12,11 +12,6 @@ cursor: pointer;
     background-color: #a2a0a039;
 }
 
-.color {
-    color: black;
-}
-
-
 @media (max-width: 1024px) { width: 320px; height: 94px}
 @media (max-width: 768px) { width: 100%; height: 18%}
 @media (max-width: 620px) {width: 90%;  height: 18%}
@@ -47,19 +42,22 @@ export const Left = styled.img`
  `
 
  export const Title = styled.div`
-    color: #ffffffd6;
+    color: ${props => props.theme.colors.secondary};
     font-size: 15px;
+    font-weight: 700;
     margin: 0;   
 
 `
  export const Author = styled.p`
-    color: #ffffffd6;
+    color: ${props => props.theme.colors.secondary};
     font-size: 11px;
+    font-weight: 600;
     margin: 0;
 `
  export const Views = styled.p`
-    color: #ffffffd6;
-    font-size: 8px;
+    color: ${props => props.theme.colors.secondary};
+    font-size: 10px;
+    font-weight: 600;
     margin: 0;
 
 `
