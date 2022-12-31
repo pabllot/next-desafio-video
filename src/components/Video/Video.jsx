@@ -50,7 +50,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
 
   // ao trocar de vídeo quando o video ta rodando, seta o botão p pausar pq o video ta em autoplay
   useEffect(() => {
-    setIsVideoPaused(false)
+    !isVideoPaused ? setIsVideoPaused(false) : setIsVideoPaused(true)
   },[chosenVideo])
 
   // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 1:3.
