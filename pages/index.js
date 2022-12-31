@@ -1,8 +1,8 @@
 import  React, { useState } from 'react'
 import Head from 'next/head'
-import { Sidebar } from '../components/Sidebar/Sidebar'
-import { Video } from '../components/Video/Video'
-import { vids } from '../components/Database/Data'
+import { Sidebar } from '../src/components/Sidebar/Sidebar'
+import { Video } from '../src/components/Video/Video'
+import { vids } from '../data/Data'
 
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'

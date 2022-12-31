@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SelectVideo } from '../SelectVideo/SelectVideo'
 import { Container, Sidebarr, Filter, Button, LargeButton, Icon } from './styles';
-import { vids } from '../Database/Data'
+import { vids } from '../../../data/Data'
 import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
 
