@@ -38,6 +38,7 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
   )
 }
 
+// getStaticProps melhora a performance, bom para SEO
 export async function getStaticProps() {
   const { vids } = await import ('../../../data/data.json');
   console.log(vids)
