@@ -33,7 +33,10 @@ export default function Home({data}) {
   )
 }
 
-// getStaticProps melhora a performance, bom para SEO
+// getStaticProps melhora a performance, bom para SEO - 
+// com getStaticProps o server usa o data e faz o cache
+// import normal iria para o client side e n faria o cache
+
 export async function getStaticProps() {
   const { vids } = await import ('../data/data.json');
   return {
