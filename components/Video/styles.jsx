@@ -69,7 +69,7 @@ export const VideoContainer = styled.div`
     border-bottom-left-radius: 0
    }
   
-  @media (max-width: 380px) {
+  @media (max-width: 420px) {
     height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
     width: 100vw; 
     border-bottom-left-radius: 0 

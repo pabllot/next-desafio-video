@@ -33,7 +33,7 @@ overflow: hidden;
  
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
   width: 100vw;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
