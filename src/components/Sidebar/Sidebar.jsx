@@ -38,7 +38,7 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { vids } = await import ('../../../data/data.json');
   console.log(vids)
   return {
