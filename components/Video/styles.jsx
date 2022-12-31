@@ -7,7 +7,7 @@ export const Container = styled.div`
   
   video { width: 100% }  
 
-  @media (max-width: 1100px) { width: 1024px;height: 580px }  
+  @media (max-width: 1100px) { width: 1024px; height: 580px }  
   @media (max-width: 768px) { height: 30% }  
   @media (max-width: 620px) { height: 30% }  
   @media (max-width: 450px) { height: 30% }
@@ -64,8 +64,8 @@ export const VideoContainer = styled.div`
   }
 
   @media (max-width: 660px) { 
-    width: 80vw;
-    height: 100%; 
+    width: ${(props) => (props.isTheaterMode ? '100vw' : '80vw')};
+    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
     border-bottom-left-radius: 0
    }
   
