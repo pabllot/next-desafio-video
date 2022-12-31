@@ -48,9 +48,9 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
     else fullScreenRef.current.requestFullscreen()
     }
 
-  // ao trocar de vídeo quando o video ta rodando, seta o botão p play
+  // ao trocar de vídeo quando o video ta rodando, seta o botão p pausar pq o video ta em autoplay
   useEffect(() => {
-    setIsVideoPaused(true)
+    setIsVideoPaused(false)
   },[chosenVideo])
 
   // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 1:3.
@@ -113,6 +113,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
           src={chosenVideo} 
           type='video/mp4'
           loop 
+          autoPlay
           />
       </VideoContainer>
     </Container>
