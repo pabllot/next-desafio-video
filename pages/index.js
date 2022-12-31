@@ -34,7 +34,7 @@ export default function Home({data}) {
 }
 
 // getStaticProps melhora a performance, bom para SEO
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { vids } = await import ('../data/data.json');
   return {
     props: {
