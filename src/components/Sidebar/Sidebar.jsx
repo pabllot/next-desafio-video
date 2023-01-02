@@ -30,7 +30,7 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
           </Filter>
 
        {filteredVids.slice(0, 5).map(item=><Card theme={theme} setChosenVideo={setChosenVideo} url={item.url}
-        key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
+        key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} alt={item.alt}/>       
        )}
  
       </Sidebarr>
