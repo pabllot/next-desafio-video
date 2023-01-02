@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SelectVideo } from '../SelectVideo/SelectVideo'
+import { Card } from '../Card/Card'
 import { Container, Sidebarr, Filter, Button, LargeButton, Icon } from './styles';
 import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
@@ -29,7 +29,7 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
             <Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>
           </Filter>
 
-       {filteredVids.slice(0, 5).map(item=><SelectVideo theme={theme} setChosenVideo={setChosenVideo} url={item.url}
+       {filteredVids.slice(0, 5).map(item=><Card theme={theme} setChosenVideo={setChosenVideo} url={item.url}
         key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
  
