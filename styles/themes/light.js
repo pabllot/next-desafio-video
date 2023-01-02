@@ -5,7 +5,7 @@ export default {
         primary: '#FAF7F0',
         secondary: 'black',
         background: '#ADA2FF',
-        icon: '#4936b2',
+        icon: 'black',
         button: '#ADA2FF',
         buttonCLicked: '#ADA2FF',
         buttonText: '#150050'
