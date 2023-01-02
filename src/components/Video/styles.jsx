@@ -28,7 +28,7 @@ export const VideoControlsContainer = styled.div`
 
 export const Progress = styled.div`
   height: 4px;
-  background: red;
+  background: #c31e1e;
   position: absolute;
   z-index: 999;
   bottom: 38px;
@@ -85,9 +85,13 @@ export const VolumeContainer = styled.div`
     transform: scaleX(1);
   }
 
- @media (max-width: 768px) {
+ @media (max-width: 600px) {
+  &:hover .volume-slider {
+    width: 40px;
+    transform: scaleX(1);
+  }
   .volume-slider {
-    width: 55px;
+    width: 40px;
     transform: scaleX(1);
   }
  }
