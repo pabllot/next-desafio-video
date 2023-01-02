@@ -162,6 +162,21 @@ export const VolumeSlider = styled.input`
   transform: scaleX(0);
   transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
   margin-left: 1rem;
+  appearance: none;
+  height: 4px;
+  background-color: #acaaaa;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb{
+    appearance: none;
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+  }
+
 `
 
 
