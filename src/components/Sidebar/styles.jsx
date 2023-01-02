@@ -75,7 +75,7 @@ export const Filter = styled.div`
 export const Button = styled.button`
   background-color: ${props => props.theme.colors.button};
   border-radius: 5px;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.buttonText};
   cursor: pointer;
   border: none;
   outline: none;
@@ -106,7 +106,7 @@ export const Button = styled.button`
 export const LargeButton = styled.button`
   background-color: ${props => props.theme.colors.button};
   border-radius: 5px;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.buttonText};
   cursor: pointer;
   border: none;
   outline: none;

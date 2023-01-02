@@ -7,6 +7,7 @@ export default {
         background: '#ADA2FF',
         icon: '#4936b2',
         button: '#ADA2FF',
-        buttonCLicked: '#ADA2FF'
+        buttonCLicked: '#ADA2FF',
+        buttonText: '#150050'
     }
 }
