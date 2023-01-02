@@ -97,11 +97,11 @@ export const VolumeContainer = styled.div`
  }
  @media (max-width: 500px) {
   &:hover .volume-slider {
-    width: 35px;
+    width: 42px;
     transform: scaleX(1);
   }
   .volume-slider {
-    width: 35px;
+    width: 42px;
     transform: scaleX(1);
   }
  }
@@ -183,17 +183,17 @@ export const VolumeSlider = styled.input`
   transform-origin: left;
   transform: scaleX(0);
   transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
-  margin-left: 1rem;
+  margin-left: .5rem;
   appearance: none;
-  height: 4px;
+  height: 4.5px;
   background-color: #d5d0d0;
   cursor: pointer;
 
   &::-webkit-slider-thumb{
     appearance: none;
     display: block;
-    height: 12px;
-    width: 12px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
@@ -202,8 +202,8 @@ export const VolumeSlider = styled.input`
   &::-moz-range-thumb{
     appearance: none;
     display: block;
-    height: 12px;
-    width: 12px;
+    height: 13px;
+    width: 13px;
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
