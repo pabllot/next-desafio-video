@@ -164,7 +164,7 @@ export const VolumeSlider = styled.input`
   margin-left: 1rem;
   appearance: none;
   height: 4px;
-  background-color: #acaaaa;
+  background-color: #d5d0d0;
   cursor: pointer;
 
   &::-webkit-slider-thumb{
