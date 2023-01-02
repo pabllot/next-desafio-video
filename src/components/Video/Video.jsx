@@ -1,5 +1,5 @@
 import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoContainer, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { IoMdPlay, IoMdPause } from 'react-icons/io'
 import { MdVolumeOff } from 'react-icons/md'
 import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
