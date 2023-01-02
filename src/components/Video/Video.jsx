@@ -36,8 +36,8 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   // ajustar volume de acordo com a barrinha 
   const  handleRange= (e)=>{
     if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(true);
-    else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(false)
-    else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(false)
+    else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.1, setIsMute(false)
+    else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.5, setIsMute(false)
     else vidRef.current.volume = 1
     }
 
@@ -47,8 +47,6 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
     if (!isFullScreen)document.exitFullscreen()
     else fullScreenRef.current.requestFullscreen()
     }
-
-
 
   // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 1:3.
   const startWithZero = new Intl.NumberFormat(undefined, {
