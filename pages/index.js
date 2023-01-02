@@ -25,7 +25,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <main className={`${styles.main} ${ theme ? styles.light : ''}`}>
+      <main className={styles.main}>
          <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo}/>
          {!isTheaterMode && <Sidebar data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} /> }
       </main>
