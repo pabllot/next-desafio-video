@@ -179,6 +179,7 @@ export const VolumeSlider = styled.input`
   appearance: none;
   height: 4.5px;
   background-color: #d5d0d0;
+  outline: none;
   cursor: pointer;
 
   &::-webkit-slider-thumb{
@@ -188,8 +189,8 @@ export const VolumeSlider = styled.input`
     width: 13px;
     border-radius: 50%;
     background-color: white;
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
   }
   
   &::-moz-range-thumb{
