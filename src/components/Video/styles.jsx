@@ -177,6 +177,15 @@ export const VolumeSlider = styled.input`
     cursor: pointer;
   }
 
+  &::-moz-range-thumb{
+    appearance: none;
+    display: block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+  }
 `
 
 
