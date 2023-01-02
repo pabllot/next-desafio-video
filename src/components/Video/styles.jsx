@@ -97,11 +97,11 @@ export const VolumeContainer = styled.div`
  }
  @media (max-width: 500px) {
   &:hover .volume-slider {
-    width: 40px;
+    width: 35px;
     transform: scaleX(1);
   }
   .volume-slider {
-    width: 40px;
+    width: 35px;
     transform: scaleX(1);
   }
  }
