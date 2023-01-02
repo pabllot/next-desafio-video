@@ -81,7 +81,7 @@ export const VolumeContainer = styled.div`
   align-items: center;
 
   &:hover .volume-slider {
-    width: 100px;
+    width: 75px;
     transform: scaleX(1);
   }
 `
