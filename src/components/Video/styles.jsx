@@ -84,6 +84,14 @@ export const VolumeContainer = styled.div`
     width: 75px;
     transform: scaleX(1);
   }
+
+ @media (max-width: 768px) {
+  .volume-slider {
+    width: 55px;
+    transform: scaleX(1);
+  }
+ }
+
 `
 export const Button = styled.button`
 background: none;
