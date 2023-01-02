@@ -86,20 +86,12 @@ export const VolumeContainer = styled.div`
   }
 
  @media (max-width: 768px) {
-  &:hover .volume-slider {
-    width: 60px;
-    transform: scaleX(1);
-  }
   .volume-slider {
     width: 60px;
     transform: scaleX(1);
   }
  }
  @media (max-width: 500px) {
-  &:hover .volume-slider {
-    width: 42px;
-    transform: scaleX(1);
-  }
   .volume-slider {
     width: 42px;
     transform: scaleX(1);
@@ -197,8 +189,9 @@ export const VolumeSlider = styled.input`
     border-radius: 50%;
     background-color: white;
     cursor: pointer;
+    outline: none;
   }
-
+  
   &::-moz-range-thumb{
     appearance: none;
     display: block;
@@ -206,6 +199,7 @@ export const VolumeSlider = styled.input`
     width: 13px;
     border-radius: 50%;
     background-color: white;
+    outline: none;
     cursor: pointer;
   }
 `
