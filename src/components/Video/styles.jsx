@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   height: 650px;
-  
+
   video { width: 100% }  
 
   @media (max-width: 1100px) { width: 1024px; height: 580px }  
@@ -12,6 +12,7 @@ export const Container = styled.div`
   @media (max-width: 620px) { height: 30% }  
   @media (max-width: 450px) { height: 30% }
 `
+
 export const VideoControlsContainer = styled.div`
   position: absolute;
   bottom: 0;
@@ -26,11 +27,22 @@ export const VideoControlsContainer = styled.div`
   
 `
 
+export const Timeline = styled.div`
+  height: 4px;
+  background: transparent;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  bottom: 38px;
+  left: 0;
+  cursor: pointer;
+`
+
 export const Progress = styled.div`
   height: 4px;
   background: #c31e1e;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   bottom: 38px;
   left: 0;
   opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};

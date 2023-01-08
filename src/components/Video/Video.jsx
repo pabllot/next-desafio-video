@@ -1,4 +1,4 @@
-import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, VideoContainer, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
+import { Button, Container, Controls, DurationContainer, Progress, SpeedButton, Timeline, VideoContainer, VideoControlsContainer, VolumeContainer, VolumeSlider } from './styles';
 import { useState, useRef } from 'react'
 import { IoMdPlay, IoMdPause } from 'react-icons/io'
 import { MdVolumeOff } from 'react-icons/md'
@@ -77,10 +77,26 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
    // para mostrar a barrinha carregando conforme o tempo passa  
   const width = 100 / parseInt(duration?.replace(':', '')) * parseInt(currentTime?.replace(':', ''))
 
+  // ir para o momento do vídeo clicado
+  const getNewCurrentTime = (e) => {
+    if(!vidRef.current) return;
+    //pegar informações do mouse no momento do clique com esse método
+    const {left, width} = e.currentTarget.getBoundingClientRect();
+    const clickPos = (e.clientX - left) / width
+    if(clickPos < 0 || clickPos > 1) return;
+
+    const durationMs = vidRef.current.duration * 1000
+
+    const newProgressMs = durationMs * clickPos;
+    const newTimeSec = newProgressMs / 1000
+    vidRef.current.currentTime =  newTimeSec;
+  }
+
   return (
     <Container>
       <VideoContainer isTheaterMode={isTheaterMode}  ref={fullScreenRef}>
-        <Progress isVideoPaused={isVideoPaused} style={{width: `${width}%`}}/>
+        <Timeline onClick={getNewCurrentTime} className='progressinho'/>
+        <Progress  isVideoPaused={isVideoPaused} style={{width: `${width}%`}}/>
         <VideoControlsContainer isVideoPaused={isVideoPaused}>
           <Controls>
             
