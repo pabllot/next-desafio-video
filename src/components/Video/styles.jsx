@@ -28,7 +28,7 @@ export const VideoControlsContainer = styled.div`
 `
 
 export const Timeline = styled.div`
-  height: 4px;
+  height: 7px;
   background: transparent;
   position: absolute;
   z-index: 999;
