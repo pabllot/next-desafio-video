@@ -22,7 +22,7 @@ export const VideoControlsContainer = styled.div`
   z-index: 100;
   transition: opacity 150ms ease-in-out;
   background-color: rgba(38, 37, 37, 0.438);
-  border-top: 4px solid rgb(198, 192, 192);
+  border-top: 4px solid rgb(215, 202, 202);
   opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};
   
 `
@@ -40,7 +40,7 @@ export const Timeline = styled.div`
 
 export const Progress = styled.div`
   height: 4px;
-  background: #c31e1e;
+  background: ${props => props.theme.colors.background};
   position: absolute;
   z-index: 998;
   bottom: 38px;

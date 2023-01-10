@@ -5,7 +5,7 @@ import { BsSunFill} from 'react-icons/bs'
 import { IoMdMoon } from 'react-icons/io'
 
 export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
-  const [filter, setFilter] = useState('office');
+  const [filter, setFilter] = useState('kids');
   const [filteredVids, setFilteredVids] = useState([]);
 
 
@@ -22,10 +22,10 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
     <Container >
         <Sidebarr>
           <Filter> 
+            <Button onClick={()=>setFilter('kids')}>Movies</Button>
             <LargeButton onClick={()=>setFilter('office')}>The Office</LargeButton>
             <Button onClick={()=>setFilter('cats')}>Cats</Button>
             <Button onClick={()=>setFilter('dogs')}>Dogs</Button>
-            <Button onClick={()=>setFilter('kids')}>Kids</Button>
             {/*<Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
           </Filter>
 
