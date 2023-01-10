@@ -4,7 +4,7 @@ export default {
     colors: {
         primary: '#FAF7F0',
         secondary: 'black',
-        background: '#ADA2FF',
+        background: 'white',
         icon: 'black',
         button: '#ADA2FF',
         buttonCLicked: '#ADA2FF',

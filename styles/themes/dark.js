@@ -2,9 +2,9 @@ export default {
     title: 'dark',
 
     colors: {
-        primary: '#151515',
+        primary: 'black',
         secondary: '#d4c7c7',
-        background: '#181D31',
+        background: 'white',
         icon: 'yellow',
         button: '#ffffffe8',
         buttonCLicked: '#1d1a1a',
