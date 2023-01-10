@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   video { width: 100% }  
 
-  @media (max-width: 1100px) { width: 1024px; height: 580px }  
+  @media (max-width: 1100px) { width: 600px; height: 580px }  
   @media (max-width: 768px) { height: 30% }  
   @media (max-width: 620px) { height: 30% }  
   @media (max-width: 450px) { height: 30% }
@@ -56,7 +56,8 @@ export const VideoContainer = styled.div`
   justify-content: center;
   margin-inline: auto;
   overflow: hidden;
-  background-color: black;
+  background-color: #0A2647;
+  border-radius: 5px;
 
   &:hover ${VideoControlsContainer}{
     opacity: 1;
@@ -72,19 +73,19 @@ export const VideoContainer = styled.div`
   @media (max-width: 768px) { 
     width: ${(props) => (props.isTheaterMode ? '100vw' : '50vw')};
     height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
-    border-bottom-left-radius: 0 
+    border-radius: 0px;
   }
 
   @media (max-width: 660px) { 
     width: ${(props) => (props.isTheaterMode ? '100vw' : '80vw')};
     height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
-    border-bottom-left-radius: 0
+    border-radius: 0px;
    }
   
   @media (max-width: 420px) {
     height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
     width: 100vw; 
-    border-bottom-left-radius: 0 
+    border-radius: 0px;
   }
 `
 

@@ -26,7 +26,7 @@ export const Sidebar = ({setChosenVideo, toggleTheme, theme, data }) => {
             <Button onClick={()=>setFilter('cats')}>Cats</Button>
             <Button onClick={()=>setFilter('dogs')}>Dogs</Button>
             <Button onClick={()=>setFilter('kids')}>Kids</Button>
-            <Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>
+            {/*<Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
           </Filter>
 
        {filteredVids.slice(0, 5).map(item=><Card theme={theme} setChosenVideo={setChosenVideo} url={item.url}

@@ -2,11 +2,11 @@ export default {
     title: 'dark',
 
     colors: {
-        primary: 'black',
+        primary: '#0A2647',
         secondary: '#d4c7c7',
-        background: 'white',
+        background: '#205295',
         icon: 'yellow',
-        button: '#ffffffe8',
+        button: '#2C74B3',
         buttonCLicked: '#1d1a1a',
         buttonText: '#150050'
     }

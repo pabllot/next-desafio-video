@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-width: 340px;
+width: 470px;
 height: 108px;
 display: flex;
 align-items: center;
-justify-content: space-evenly;
+justify-content: center;
+gap: 8px;
 cursor: pointer;
 
 &:hover {
@@ -22,7 +23,7 @@ export const Right = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 145px;
+    width: 195px;
     height: 80px;
 
     @media (max-width: 768px) {height: 85%; width: 50%}
@@ -31,7 +32,7 @@ export const Right = styled.div`
 `
 
 export const Left = styled.img`
-    width: 140px;
+    width: 130px;
     height: 80px;
     border-radius: 4px;
 

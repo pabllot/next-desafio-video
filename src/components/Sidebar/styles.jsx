@@ -4,39 +4,31 @@ export const Container = styled.div`
 display: flex;
 align-items: center;
 height: 650px;
-width: 440px;
-border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
+width: 360px;
 overflow: hidden;
+border-radius: 5px;
 
 @media (max-width: 1100px) {
-  width: 420px;
+  width: 360px;
   height: 580px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-
 }
 
 @media (max-width: 768px) {
   width: 50vw;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 0px;
   height: 70%;
 }
 
 @media (max-width: 660px) {
   width: 80vw;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 0px;
   height: 70%;
  
 }
 
 @media (max-width: 420px) {
   width: 100vw;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 0px;
   height: 70%;
 }
 `
@@ -60,15 +52,15 @@ export const Sidebarr = styled.div`
 
 export const Filter = styled.div`
   height: 30px;
-  width: 76%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
-  @media (max-width: 1100px){width: 90%}
-  @media (max-width: 768px) {width: 100%;   height: 8%}
-  @media (max-width: 620px) {width: 100%;    height: 8%}
-  @media (max-width: 450px) {width: 100%;    height: 8%}
+  @media (max-width: 1100px){}
+  @media (max-width: 768px) {height: 8%}
+  @media (max-width: 620px) {height: 8%}
+  @media (max-width: 450px) {height: 8%}
 
 `
 
@@ -88,14 +80,14 @@ export const Button = styled.button`
   width: 50px;
   height: 20px;
 
-  &:focus {
-  background-color:${props => props.theme.colors.buttonCLicked};
-  color: white;
-
-}
-
-  &:active {
-  background-color: #6a6969af;
+ // &:focus {
+ // background-color:${props => props.theme.colors.buttonCLicked};
+ // color: #7056f2;
+//
+//}
+//
+ &:active {
+  background-color: #3265f3f5;
 }
 
    @media (max-width: 1100px) {  width: 39px; height: 20px; font-size: 13px;}
@@ -119,14 +111,13 @@ export const LargeButton = styled.button`
   width: 70px;
   height: 20px;
 
-  &:focus {
-  background-color:${props => props.theme.colors.buttonCLicked};
-  color: white;
-
-}
+ // &:focus {
+ // background-color:${props => props.theme.colors.buttonCLicked};
+ // color: white;
+//}
 
   &:active {
-  background-color: #6a6969af;
+    background-color: #3265f3f5;
 }
 
    @media (max-width: 1100px) {  width: 60px; height: 20px; font-size: 12.5px;}
