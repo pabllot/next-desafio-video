@@ -121,7 +121,7 @@ export const LargeButton = styled.button`
 
   &:focus {
   background-color:${props => props.theme.colors.buttonCLicked};
-  color: #000000c9;
+  color: white;
 
 }
 
