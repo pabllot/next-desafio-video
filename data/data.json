@@ -1,4 +1,9 @@
 { "vids" : [
+    {"id": 16, "name": "Breaking bad", "author": "Pablo Teixeira", "views": "9122", "img": "/assets/pics/quotes1.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/jesse.mp4"},
+    {"id": 17, "name":  "Trainspotting", "author": "Pablo Teixeira", "views": "3455", "img": "/assets/pics/quotes2.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/chooselife.mp4" },
+    {"id": 18, "name":  "Rocky Balboa", "author": "Pablo Teixeira", "views": "7654", "img": "/assets/pics/quotes3.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/rocky.mp4"},
+    {"id": 19, "name":  "Collateral beauty", "author": "Pablo Teixeira", "views": "5644", "img": "/assets/pics/quotes4.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/will.mp4"},
+    {"id": 20, "name":  "Good Will Hunting", "author": "Pablo Teixeira", "views": "5446", "img": "/assets/pics/quotes5.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/goodwillhunting.mp4"},
     {"id": 1, "name":  "Roubo de identidade não é uma piada", "author": "Pablo Teixeira", "views": "7654", "img": "/assets/pics/office3.png", "alt": "thumbnail", "genre": "office", "url": "/assets/vids/office3.mp4"},
     {"id": 2, "name": "Piada toc-toc do Dwight", "author": "Pablo Teixeira", "views": "9122", "img": "/assets/pics/office1.png", "alt": "thumbnail", "genre": "office", "url": "/assets/vids/office1.mp4"},
     {"id": 3, "name":  "Treinamento de atendimento", "author": "Pablo Teixeira", "views": "3455", "img": "/assets/pics/office2.png", "alt": "thumbnail", "genre": "office", "url": "/assets/vids/office2.mp4" },
@@ -13,12 +18,7 @@
     {"id": 12, "name":  "Correndo pra lá e pra cá", "author": "Pablo Teixeira", "views": "4532", "img": "/assets/pics/dogs1.png", "alt": "thumbnail", "genre": "dogs", "url": "/assets/vids/dogs1.mp4"},
     {"id": 13, "name":  "Cachorro cantando", "author": "Pablo Teixeira", "views": "5777", "img": "/assets/pics/dogs3.png", "alt": "thumbnail", "genre": "dogs", "url": "/assets/vids/dogs3.mp4"},
     {"id": 14, "name":  "Reagindo a seus próprios clones", "author": "Pablo Teixeira", "views": "3222", "img": "/assets/pics/dogs4.png", "alt": "thumbnail", "genre": "dogs", "url": "/assets/vids/dogs4.mp4"},
-    {"id": 15, "name":  "Cachorrinho querendo ser brabo", "author": "Pablo Teixeira", "views": "34534", "img": "/assets/pics/dogs5.png", "alt": "thumbnail", "genre": "dogs", "url": "/assets/vids/dogs5.mp4"},
-    {"id": 16, "name": "Breaking bad", "author": "Pablo Teixeira", "views": "9122", "img": "/assets/pics/quotes1.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/jesse.mp4"},
-    {"id": 17, "name":  "Trainspotting", "author": "Pablo Teixeira", "views": "3455", "img": "/assets/pics/quotes2.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/chooselife.mp4" },
-    {"id": 18, "name":  "Rocky Balboa", "author": "Pablo Teixeira", "views": "7654", "img": "/assets/pics/quotes3.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/rocky.mp4"},
-    {"id": 19, "name":  "Collateral beauty", "author": "Pablo Teixeira", "views": "5644", "img": "/assets/pics/quotes4.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/will.mp4"},
-    {"id": 20, "name":  "Good Will Hunting", "author": "Pablo Teixeira", "views": "5446", "img": "/assets/pics/quotes5.png", "alt": "thumbnail", "genre": "kids", "url": "/assets/vids/goodwillhunting.mp4"}
+    {"id": 15, "name":  "Cachorrinho querendo ser brabo", "author": "Pablo Teixeira", "views": "34534", "img": "/assets/pics/dogs5.png", "alt": "thumbnail", "genre": "dogs", "url": "/assets/vids/dogs5.mp4"}
     ]
 
 }

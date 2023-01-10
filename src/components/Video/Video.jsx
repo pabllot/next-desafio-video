@@ -108,7 +108,7 @@ export const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
 
             <DurationContainer>
               <div>{currentTime}</div>/
-              <div>{duration ? duration : '0:59'}</div>
+              <div>{duration ? duration : '2:43'}</div>
             </DurationContainer>
 
             <SpeedButton onClick={changeSpeed}>{speed}x</SpeedButton>
