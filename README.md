@@ -1,6 +1,6 @@
 <h1 align="center">Video Player App</h1>
 
-![thatsthone](https://user-images.githubusercontent.com/101361880/209676141-78617250-5798-4a8a-9381-a9f34a5f22b9.gif)
+![zazazazazaza](https://user-images.githubusercontent.com/101361880/212099986-3b1a43b9-cefa-432a-8103-be2a9f56e2a8.png)
 
 <h3 align="center" >That's a project I've developed by myself with the following functionalities:</h3>
 
