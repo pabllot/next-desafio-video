@@ -54,7 +54,7 @@ export const Filter = styled.div`
   height: 30px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
 
   @media (max-width: 1100px){}
@@ -66,7 +66,6 @@ export const Filter = styled.div`
 
 export const Button = styled.button`
   background-color: ${props => props.theme.colors.button};
-  border-radius: 5px;
   color: ${props => props.theme.colors.buttonText};
   cursor: pointer;
   border: none;
@@ -77,27 +76,73 @@ export const Button = styled.button`
   font-size: 14px;
   font-weight: 700;
   outline-style: none;
-  width: 50px;
-  height: 20px;
+  width: 60px;
+  height: 25px;
+  position: relative;
 
- // &:focus {
- // background-color:${props => props.theme.colors.buttonCLicked};
- // color: #7056f2;
-//
-//}
-//
- &:active {
-  background-color: #3265f3f5;
+
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    background-color: rgba(250, 250, 255, 0.112);
+
+  
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: all 0.8s ease;
+}
+&:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    background-color:  rgba(250, 250, 255, 0.112);
+
+  
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: all 0.8s ease;
+}
+&:hover::after,
+&:hover::before {
+    border-color: ${props => props.theme.colors.button};
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+}
+&:hover {
+    transition: 0.5s;
+    color: #dedcdc;
+    background-color: transparent;
+
+
 }
 
+&:focus {
+    border: 2px solid;
+    border-color: ${props => props.theme.colors.button};
+    background-color: transparent;
+    color: white;
+
+}
+
+
    @media (max-width: 1100px) {  width: 39px; height: 20px; font-size: 13px;}
-   @media (max-width: 768px) { font-size: 12.5px;  width: 80px;  height: 20px;}
-   @media (max-width: 450px) {font-size: 14px;  width: 54px;  height: 20px;}
+   @media (max-width: 768px) { font-size: 12px;  width: 80px;  height: 20px;}
+   @media (max-width: 450px) {font-size: 12px;  width: 54px;  height: 20px;}
 
 `
 export const LargeButton = styled.button`
   background-color: ${props => props.theme.colors.button};
-  border-radius: 5px;
   color: ${props => props.theme.colors.buttonText};
   cursor: pointer;
   border: none;
@@ -109,20 +154,66 @@ export const LargeButton = styled.button`
   font-weight: 700;
   outline-style: none;
   width: 70px;
-  height: 20px;
+  height: 25px;
+  position: relative;
 
- // &:focus {
- // background-color:${props => props.theme.colors.buttonCLicked};
- // color: white;
-//}
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    background-color: rgba(250, 250, 255, 0.112);
 
-  &:active {
-    background-color: #3265f3f5;
+  
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: all 0.8s ease;
+}
+&:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    background-color:  rgba(250, 250, 255, 0.112);
+
+  
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: all 0.8s ease;
+}
+&:hover::after,
+&:hover::before {
+    border-color: ${props => props.theme.colors.button};
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+}
+&:hover {
+    transition: 0.5s;
+    color: #dedcdc;
+    background-color: transparent;
+
+
+}
+
+&:focus {
+    border: 2px solid;
+    border-color: ${props => props.theme.colors.button};
+    background-color: transparent;
+    color: white;
+
 }
 
    @media (max-width: 1100px) {  width: 60px; height: 20px; font-size: 12.5px;}
-   @media (max-width: 768px) { font-size: 14px;  width: 70px;  height: 20px;}
-   @media (max-width: 450px) {font-size: 13px;  width: 70px;  height: 20px;}
+   @media (max-width: 768px) { font-size: 12px;  width: 70px;  height: 20px;}
+   @media (max-width: 450px) {font-size: 12px;  width: 70px;  height: 20px;}
 
 `
 export const Icon = styled.div`

@@ -45,20 +45,20 @@ export const Left = styled.img`
  export const Title = styled.div`
     color: ${props => props.theme.colors.secondary};
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;   
 
 `
  export const Author = styled.p`
     color: ${props => props.theme.colors.secondary};
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 300;
     margin: 0;
 `
  export const Views = styled.p`
     color: ${props => props.theme.colors.secondary};
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 300;
     margin: 0;
 
 `
