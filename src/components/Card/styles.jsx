@@ -23,8 +23,8 @@ export const Right = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 195px;
-    height: 80px;
+    width: 175px;
+    height: 100px;
 
     @media (max-width: 768px) {height: 85%; width: 50%}
     @media (max-width: 620px) {height: 85%; width: 50%}
@@ -32,8 +32,8 @@ export const Right = styled.div`
 `
 
 export const Left = styled.img`
-    width: 130px;
-    height: 80px;
+    width: 150px;
+    height: 100px;
     border-radius: 4px;
 
     @media (max-width: 1024px) {width: 125px}
