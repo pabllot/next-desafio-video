@@ -58,7 +58,7 @@ export const Filter = styled.div`
   justify-content: space-evenly;
 
   @media (max-width: 1100px){}
-  @media (max-width: 768px) {height: 8%}
+  @media (max-width: 768px) {height: 8%;   align-items: center;}
   @media (max-width: 620px) {height: 8%}
   @media (max-width: 450px) {height: 8%}
 
