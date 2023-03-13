@@ -7,6 +7,7 @@ import {
   Button,
   LargeButton,
   Icon,
+  CardContainer,
 } from "./styles";
 import { BsSunFill } from "react-icons/bs";
 import { IoMdMoon } from "react-icons/io";
@@ -34,20 +35,21 @@ export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data }) => {
           </LargeButton>
           {/*<Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
         </Filter>
-
-        {filteredVids.slice(0, 5).map((item) => (
-          <Card
-            theme={theme}
-            setChosenVideo={setChosenVideo}
-            url={item.url}
-            key={item.id}
-            name={item.name}
-            author={item.author}
-            views={item.views}
-            img={item.img}
-            alt={item.alt}
-          />
-        ))}
+        <CardContainer>
+          {filteredVids.slice(0, 6).map((item) => (
+            <Card
+              theme={theme}
+              setChosenVideo={setChosenVideo}
+              url={item.url}
+              key={item.id}
+              name={item.name}
+              author={item.author}
+              views={item.views}
+              img={item.img}
+              alt={item.alt}
+            />
+          ))}
+        </CardContainer>
       </Sidebarr>
     </Container>
   );

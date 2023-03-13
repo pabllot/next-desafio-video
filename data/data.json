@@ -12,7 +12,7 @@
     },
     {
       "id": 17,
-      "name": "If you decide to love someone",
+      "name": "Let it brake",
       "author": "Pablo Teixeira",
       "views": "3455",
       "img": "/assets/pics/scene2.png",
@@ -51,8 +51,18 @@
       "url": "/assets/vids/scene5.mp4"
     },
     {
+      "id": 21,
+      "name": "Reality",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/scene6.png",
+      "alt": "thumbnail",
+      "genre": "kids",
+      "url": "/assets/vids/scene6.mp4"
+    },
+    {
       "id": 1,
-      "name": "Roubo de identidade não é uma piada",
+      "name": "Identity theft is not a joke",
       "author": "Pablo Teixeira",
       "views": "7654",
       "img": "/assets/pics/office3.png",
@@ -62,7 +72,7 @@
     },
     {
       "id": 2,
-      "name": "Piada toc-toc do Dwight",
+      "name": "Knock knock joke",
       "author": "Pablo Teixeira",
       "views": "9122",
       "img": "/assets/pics/office1.png",
@@ -72,7 +82,7 @@
     },
     {
       "id": 3,
-      "name": "Treinamento de atendimento",
+      "name": "William Buttlicker",
       "author": "Pablo Teixeira",
       "views": "3455",
       "img": "/assets/pics/office2.png",
@@ -82,7 +92,7 @@
     },
     {
       "id": 4,
-      "name": "Dwight salva Stanley de veneno",
+      "name": "Dwight saves Stanley",
       "author": "Pablo Teixeira",
       "views": "5644",
       "img": "/assets/pics/office4.png",
@@ -92,13 +102,23 @@
     },
     {
       "id": 5,
-      "name": "Video de abertura The Office",
+      "name": "Opening The Office",
       "author": "Pablo Teixeira",
       "views": "5446",
       "img": "/assets/pics/office5.png",
       "alt": "thumbnail",
       "genre": "office",
       "url": "/assets/vids/office5.mp4"
+    },
+    {
+      "id": 6,
+      "name": "Jim and Andy",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/office6.png",
+      "alt": "thumbnail",
+      "genre": "office",
+      "url": "/assets/vids/office6.mp4"
     }
   ]
 }
