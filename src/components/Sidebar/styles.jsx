@@ -259,8 +259,12 @@ export const CardContainer = styled.div`
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
-
 // @media (max-width: 1100px) {}
 // @media (max-width: 768px) {}
 // @media (max-width: 620px) {}
