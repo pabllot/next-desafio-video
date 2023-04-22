@@ -34,7 +34,9 @@ export default function Home({ data }) {
       <GlobalStyle />
       <main className={styles.main}>
         {isLoading ? (
-          "Loading"
+          <div className="loaderWrapper">
+            <div className="loader" />
+          </div>
         ) : (
           <>
             <Video speed={speed} setSpeed={setSpeed} isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} />
