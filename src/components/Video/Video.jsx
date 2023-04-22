@@ -101,11 +101,9 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
       const newTimeSec = newProgressMs / 1000;
       vidRef.current.currentTime = newTimeSec;
     },
-    [vidRef.current.currentTime]
+    [vidRef]
   );
-  useEffect(() => {
-    console.log(progressWidth);
-  }, [getNewCurrentTime]);
+
   return (
     <Container>
       <VideoContainer isTheaterMode={isTheaterMode} ref={fullScreenRef}>
