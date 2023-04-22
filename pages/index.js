@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { Sidebar } from "../src/components/Sidebar/Sidebar";
 import { Video } from "../src/components/Video/Video";
@@ -14,7 +14,13 @@ export default function Home({ data }) {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
   const [chosenVideo, setChosenVideo] = useState(data[0].url);
   const [theme, setTheme] = useState(dark);
+  const [isLoading, setIsLoading] = useState(true);
+
   const toggleTheme = () => setTheme(theme.title === "light" ? dark : light);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [data]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -27,8 +33,16 @@ export default function Home({ data }) {
       </Head>
       <GlobalStyle />
       <main className={styles.main}>
-        <Video speed={speed} setSpeed={setSpeed} isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} />
-        {!isTheaterMode && <Sidebar speed={speed} setSpeed={setSpeed} data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} />}
+        {isLoading ? (
+          "Loading"
+        ) : (
+          <>
+            <Video speed={speed} setSpeed={setSpeed} isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} />
+            {!isTheaterMode && (
+              <Sidebar speed={speed} setSpeed={setSpeed} data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} />
+            )}
+          </>
+        )}
       </main>
     </ThemeProvider>
   );
@@ -40,6 +54,7 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
   const { vids } = await import("../data/data.json");
+
   return {
     props: {
       data: vids,
