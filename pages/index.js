@@ -1,19 +1,20 @@
-import  React, { useState } from 'react'
-import Head from 'next/head'
-import { Sidebar } from '../src/components/Sidebar/Sidebar'
-import { Video } from '../src/components/Video/Video'
+import React, { useState } from "react";
+import Head from "next/head";
+import { Sidebar } from "../src/components/Sidebar/Sidebar";
+import { Video } from "../src/components/Video/Video";
 
-import { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../styles/global'
-import dark from '../styles/themes/dark'
-import light from '../styles/themes/light'
-import styles from '../styles/Home.module.css'
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../styles/global";
+import dark from "../styles/themes/dark";
+import light from "../styles/themes/light";
+import styles from "../styles/Home.module.css";
 
-export default function Home({data}) {
+export default function Home({ data }) {
+  const [speed, setSpeed] = useState(1);
   const [isTheaterMode, setIsTheaterMode] = useState(false);
   const [chosenVideo, setChosenVideo] = useState(data[0].url);
   const [theme, setTheme] = useState(dark);
-  const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light);
+  const toggleTheme = () => setTheme(theme.title === "light" ? dark : light);
 
   return (
     <ThemeProvider theme={theme}>
@@ -26,22 +27,22 @@ export default function Home({data}) {
       </Head>
       <GlobalStyle />
       <main className={styles.main}>
-         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo}/>
-         {!isTheaterMode && <Sidebar data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} /> }
+        <Video speed={speed} setSpeed={setSpeed} isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} />
+        {!isTheaterMode && <Sidebar speed={speed} setSpeed={setSpeed} data={data} setChosenVideo={setChosenVideo} toggleTheme={toggleTheme} theme={theme} />}
       </main>
     </ThemeProvider>
-  )
+  );
 }
 
-// getStaticProps melhora a performance, bom para SEO - 
+// getStaticProps melhora a performance, bom para SEO -
 // com getStaticProps o server usa o data e faz o cache
 // import normal iria para o client side e n faria o cache
 
 export async function getStaticProps() {
-  const { vids } = await import ('../data/data.json');
+  const { vids } = await import("../data/data.json");
   return {
     props: {
-      data: vids
-    }, 
-  }
+      data: vids,
+    },
+  };
 }
