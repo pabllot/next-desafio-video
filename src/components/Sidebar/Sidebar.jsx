@@ -25,7 +25,7 @@ export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data, speed, setSp
           {/*<Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
         </Filter>
         <CardContainer>
-          {filteredVids.slice(0, 6).map((item) => (
+          {filteredVids.slice(0, 7).map((item) => (
             <Card
               speed={speed}
               setSpeed={setSpeed}

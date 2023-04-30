@@ -3,32 +3,37 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  height: 650px;
+  max-height: 650px;
   width: 360px;
-  overflow: hidden;
   border-radius: 5px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 1100px) {
-    width: 360px;
-    height: 580px;
+    max-height: 580px;
   }
 
   @media (max-width: 768px) {
     width: 50vw;
     border-radius: 0px;
-    height: 70%;
+    max-height: 70%;
   }
 
   @media (max-width: 660px) {
     width: 80vw;
     border-radius: 0px;
-    height: 70%;
+    max-height: 70%;
   }
 
   @media (max-width: 420px) {
     width: 100vw;
     border-radius: 0px;
-    height: 70%;
+    max-height: 70%;
   }
 `;
 
@@ -38,7 +43,7 @@ export const Sidebarr = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   margin-inline: auto;
   background: ${(props) => props.theme.colors.primary};
 
@@ -257,7 +262,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;

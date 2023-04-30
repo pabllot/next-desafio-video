@@ -22,7 +22,7 @@
     },
     {
       "id": 18,
-      "name": "Between the bars",
+      "name": "Misery likes company",
       "author": "Pablo Teixeira",
       "views": "7654",
       "img": "/assets/pics/scene3.png",
@@ -59,6 +59,16 @@
       "alt": "thumbnail",
       "genre": "kids",
       "url": "/assets/vids/scene6.mp4"
+    },
+    {
+      "id": 22,
+      "name": "Between the bars",
+      "author": "Pablo Teixeira",
+      "views": "7654",
+      "img": "/assets/pics/scene7.png",
+      "alt": "thumbnail",
+      "genre": "kids",
+      "url": "/assets/vids/scene7.mp4"
     },
     {
       "id": 1,
