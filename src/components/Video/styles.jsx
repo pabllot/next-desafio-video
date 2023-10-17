@@ -3,15 +3,25 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  height: 650px;
+  height: 750px;
+  width: 100%;
+  max-width: 1000px;
 
-  video { width: 100% }  
+  video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
 
-  @media (max-width: 1100px) { width: 600px; height: 580px }  
+  @media (max-width: 1366px) {
+    max-width: 700px;
+    height: 700px;
+  }
+  /* 
   @media (max-width: 768px) { height: 30% }  
   @media (max-width: 620px) { height: 30% }  
-  @media (max-width: 450px) { height: 30% }
-`
+  @media (max-width: 450px) { height: 30% } */
+`;
 
 export const VideoControlsContainer = styled.div`
   position: absolute;
@@ -23,9 +33,8 @@ export const VideoControlsContainer = styled.div`
   transition: opacity 150ms ease-in-out;
   background-color: rgba(38, 37, 37, 0.438);
   border-top: 4px solid rgb(215, 202, 202);
-  opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};
-  
-`
+  opacity: ${(props) => (props.isVideoPaused ? "1" : "0")};
+`;
 
 export const Timeline = styled.div`
   height: 7px;
@@ -36,57 +45,59 @@ export const Timeline = styled.div`
   bottom: 38px;
   left: 0;
   cursor: pointer;
-`
+`;
 
 export const Progress = styled.div`
   height: 4px;
-  background: ${props => props.theme.colors.background};
+  background: #c51919;
   position: absolute;
   z-index: 998;
   bottom: 38px;
   left: 0;
-  opacity: ${(props) => (props.isVideoPaused ? '1' : '0')};
+  opacity: ${(props) => (props.isVideoPaused ? "1" : "0")};
   transition: opacity 150ms ease-in-out;
-`
-export const VideoContainer = styled.div` 
+`;
+export const VideoContainer = styled.div`
   position: relative;
   display: flex;
-  width: ${(props) => (props.isTheaterMode ? '100vw' : '900px')};
-  height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
+  width: ${(props) => (props.isTheaterMode ? "100vw" : "100%")};
+  height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
   justify-content: center;
   margin-inline: auto;
   overflow: hidden;
-  background-color: #0A2647;
+  background-color: black;
 
-  &:hover ${VideoControlsContainer}{
+  &:hover ${VideoControlsContainer} {
     opacity: 1;
   }
 
-  &:hover ${Progress}{
+  &:hover ${Progress} {
     opacity: 1;
   }
-  
 
-  @media (max-width: 1100px) { width: 100%; height: 100% }
+  @media (max-width: 1100px) {
+    width: 100%;
+    height: 100%;
+  }
 
-  @media (max-width: 768px) { 
-    width: ${(props) => (props.isTheaterMode ? '100vw' : '50vw')};
-    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
+  @media (max-width: 768px) {
+    width: ${(props) => (props.isTheaterMode ? "100vw" : "50vw")};
+    height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
     border-radius: 0px;
   }
 
-  @media (max-width: 660px) { 
-    width: ${(props) => (props.isTheaterMode ? '100vw' : '80vw')};
-    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
+  @media (max-width: 660px) {
+    width: ${(props) => (props.isTheaterMode ? "100vw" : "80vw")};
+    height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
     border-radius: 0px;
-   }
-  
+  }
+
   @media (max-width: 420px) {
-    height: ${(props) => (props.isTheaterMode ? '82vh' : '100%')};
-    width: 100vw; 
+    height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
+    width: 100vw;
     border-radius: 0px;
   }
-`
+`;
 
 export const VolumeContainer = styled.div`
   display: flex;
@@ -97,66 +108,20 @@ export const VolumeContainer = styled.div`
     transform: scaleX(1);
   }
 
- @media (max-width: 768px) {
-  .volume-slider {
-    width: 60px;
-    transform: scaleX(1);
+  @media (max-width: 768px) {
+    .volume-slider {
+      width: 60px;
+      transform: scaleX(1);
+    }
   }
- }
- @media (max-width: 500px) {
-  .volume-slider {
-    width: 42px;
-    transform: scaleX(1);
+  @media (max-width: 500px) {
+    .volume-slider {
+      width: 42px;
+      transform: scaleX(1);
+    }
   }
- }
-
-`
+`;
 export const Button = styled.button`
-background: none;
-border: none;
-color: inherit;
-padding: 0;
-height: 30px;
-width: 30px;
-font-size: 1.1rem;
-cursor: pointer;
-opacity: .9;
-transition: opacity 150ms ease-in-out;
-outline: none;
-
-&hover {
-  opacity: 1;
-}
-
-`
-export const SpeedButton = styled.button`
-background: none;
-border: none;
-color: inherit;
-padding: 0;
-height: 30px;
-width: 50px;
-font-size: 1.1rem;
-cursor: pointer;
-opacity: .9;
-transition: opacity 150ms ease-in-out;
-outline: none;
-margin-right: 10px;
-font-weight: 500;
-
-&hover {
-  opacity: 1;
-}
-
-
-`
-export const Controls = styled.div`
-  display: flex;
-  gap: .5rem;
-  padding: .25rem;
-  align-items: center;
-
-  svg {
   background: none;
   border: none;
   color: inherit;
@@ -165,36 +130,78 @@ export const Controls = styled.div`
   width: 30px;
   font-size: 1.1rem;
   cursor: pointer;
-  opacity: .9;
+  opacity: 0.9;
   transition: opacity 150ms ease-in-out;
   outline: none;
 
-  &:hover {
+  &hover {
     opacity: 1;
   }
+`;
+export const SpeedButton = styled.button`
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  height: 30px;
+  width: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 150ms ease-in-out;
+  outline: none;
+  margin-right: 10px;
+  font-weight: 500;
+
+  &hover {
+    opacity: 1;
   }
-`
+`;
+export const Controls = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  align-items: center;
+
+  svg {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 150ms ease-in-out;
+    outline: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
 
 export const DurationContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: .25rem;
+  gap: 0.25rem;
   flex-grow: 1;
-`
+`;
 
 export const VolumeSlider = styled.input`
   width: 0;
   transform-origin: left;
   transform: scaleX(0);
   transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   appearance: none;
   height: 4.5px;
   background-color: #d5d0d0;
   outline: none;
   cursor: pointer;
 
-  &::-webkit-slider-thumb{
+  &::-webkit-slider-thumb {
     appearance: none;
     display: block;
     height: 13px;
@@ -204,8 +211,8 @@ export const VolumeSlider = styled.input`
     outline: none;
     cursor: pointer;
   }
-  
-  &::-moz-range-thumb{
+
+  &::-moz-range-thumb {
     appearance: none;
     display: block;
     height: 13px;
@@ -215,6 +222,4 @@ export const VolumeSlider = styled.input`
     outline: none;
     cursor: pointer;
   }
-`
-
-
+`;

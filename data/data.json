@@ -21,16 +21,6 @@
       "url": "/assets/vids/scene2.mp4"
     },
     {
-      "id": 18,
-      "name": "Misery likes company",
-      "author": "Pablo Teixeira",
-      "views": "7654",
-      "img": "/assets/pics/scene3.png",
-      "alt": "thumbnail",
-      "genre": "kids",
-      "url": "/assets/vids/scene3.mp4"
-    },
-    {
       "id": 19,
       "name": "Watch as I dive in",
       "author": "Pablo Teixeira",
@@ -52,6 +42,16 @@
     },
     {
       "id": 21,
+      "name": "Reality",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/scene6.png",
+      "alt": "thumbnail",
+      "genre": "kids",
+      "url": "/assets/vids/scene6.mp4"
+    },
+    {
+      "id": 51,
       "name": "Reality",
       "author": "Pablo Teixeira",
       "views": "5446",
@@ -122,6 +122,16 @@
     },
     {
       "id": 6,
+      "name": "Jim and Andy",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/office6.png",
+      "alt": "thumbnail",
+      "genre": "office",
+      "url": "/assets/vids/office6.mp4"
+    },
+    {
+      "id": 66,
       "name": "Jim and Andy",
       "author": "Pablo Teixeira",
       "views": "5446",

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 470px;
+  width: 100%;
   height: 108px;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     background-color: #a2a0a047;
   }
 
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     width: 320px;
     height: 94px;
   }
@@ -28,16 +28,16 @@ export const Container = styled.div`
   @media (max-width: 350px) {
     width: 90%;
     height: 18%;
-  }
+  } */
 `;
 export const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 175px;
+  width: 70%;
   height: 100px;
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     height: 85%;
     width: 50%;
   }
@@ -48,11 +48,11 @@ export const Right = styled.div`
   @media (max-width: 350px) {
     width: 50%;
     height: 85%;
-  }
+  } */
 `;
 
 export const Left = styled.img`
-  width: 150px;
+  width: 30%;
   height: 90%;
   border-radius: 4px;
   object-fit: cover;

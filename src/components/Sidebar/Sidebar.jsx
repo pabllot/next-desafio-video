@@ -20,9 +20,8 @@ export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data, speed, setSp
     <Container>
       <Sidebarr>
         <Filter>
-          <Button onClick={() => setFilter("kids")}>Movies</Button>
+          <Button onClick={() => setFilter("kids")}>Random</Button>
           <LargeButton onClick={() => setFilter("office")}>The Office</LargeButton>
-          {/*<Icon onClick={toggleTheme}>{theme.title === 'light' ? <IoMdMoon/> : <BsSunFill/>}</Icon>*/}
         </Filter>
         <CardContainer>
           {filteredVids.slice(0, 7).map((item) => (

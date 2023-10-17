@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
+  max-width: 500px;
+  height: 750px;
   display: flex;
-  align-items: center;
-  max-height: 650px;
-  width: 360px;
   border-radius: 5px;
   flex-wrap: wrap;
   overflow-y: scroll;
@@ -14,7 +14,12 @@ export const Container = styled.div`
     display: none;
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1366px) {
+    max-width: 450px;
+    height: 700px;
+  }
+
+  /* @media (max-width: 1100px) {
     max-height: 580px;
   }
 
@@ -28,24 +33,22 @@ export const Container = styled.div`
     width: 80vw;
     border-radius: 0px;
     max-height: 70%;
-  }
+  } */
 
-  @media (max-width: 420px) {
+  /* @media (max-width: 420px) {
     width: 100vw;
     border-radius: 0px;
     max-height: 70%;
-  }
+  } */
 `;
 
 export const Sidebarr = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
   width: 100%;
   max-height: 100%;
   margin-inline: auto;
-  background: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 1100px) {
     height: 100%;
@@ -65,11 +68,12 @@ export const Sidebarr = styled.div`
 `;
 
 export const Filter = styled.div`
-  height: 50px;
+  height: 35px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 1rem;
 
   @media (max-width: 1100px) {
   }
@@ -86,8 +90,8 @@ export const Filter = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: ${(props) => props.theme.colors.button};
-  color: ${(props) => props.theme.colors.buttonText};
+  background-color: #3a3939;
+  color: #e9e0e0;
   cursor: pointer;
   border: none;
   outline: none;
@@ -97,57 +101,10 @@ export const Button = styled.button`
   font-size: 14px;
   font-weight: 700;
   outline-style: none;
-  width: 60px;
   height: 25px;
   position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    background-color: rgba(250, 250, 255, 0.112);
-
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    transition: all 0.8s ease;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    background-color: rgba(250, 250, 255, 0.112);
-
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    transition: all 0.8s ease;
-  }
-  &:hover::after,
-  &:hover::before {
-    border-color: ${(props) => props.theme.colors.button};
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-  }
-  &:hover {
-    transition: 0.5s;
-    color: #dedcdc;
-    background-color: transparent;
-  }
-
-  &:focus {
-    border: 2px solid;
-    border-color: ${(props) => props.theme.colors.button};
-    background-color: transparent;
-    color: white;
-  }
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
 
   @media (max-width: 1100px) {
     width: 39px;
@@ -166,8 +123,8 @@ export const Button = styled.button`
   }
 `;
 export const LargeButton = styled.button`
-  background-color: ${(props) => props.theme.colors.button};
-  color: ${(props) => props.theme.colors.buttonText};
+  background-color: #3a3939;
+  color: #e9e0e0;
   cursor: pointer;
   border: none;
   outline: none;
@@ -177,57 +134,10 @@ export const LargeButton = styled.button`
   font-size: 13px;
   font-weight: 700;
   outline-style: none;
-  width: 70px;
   height: 25px;
   position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    background-color: rgba(250, 250, 255, 0.112);
-
-    border-bottom: 2px solid transparent;
-    border-left: 2px solid transparent;
-    transition: all 0.8s ease;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    background-color: rgba(250, 250, 255, 0.112);
-
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    transition: all 0.8s ease;
-  }
-  &:hover::after,
-  &:hover::before {
-    border-color: ${(props) => props.theme.colors.button};
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-  }
-  &:hover {
-    transition: 0.5s;
-    color: #dedcdc;
-    background-color: transparent;
-  }
-
-  &:focus {
-    border: 2px solid;
-    border-color: ${(props) => props.theme.colors.button};
-    background-color: transparent;
-    color: white;
-  }
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
 
   @media (max-width: 1100px) {
     width: 60px;
@@ -257,19 +167,37 @@ export const Icon = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  height: 100%;
+  flex: 1;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  max-height: 100%;
+  padding-right: 1rem;
+
+  @media (max-width: 992px) {
+    flex: 3;
+    margin-bottom: 5rem;
+  }
+
   &::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-left: 2rem;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    margin-left: 2rem;
+    background-color: #7f7f8573;
+  }
+
+  &::-webkit-scrollbar-thumb {
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
   }
 `;
-// @media (max-width: 1100px) {}
-// @media (max-width: 768px) {}
-// @media (max-width: 620px) {}
-//  @media (max-width: 450px) {}
