@@ -23,11 +23,6 @@ export const Container = styled.div`
     max-height: 580px;
   }
 
-  @media (max-width: 768px) {
-    width: 50vw;
-    border-radius: 0px;
-    max-height: 70%;
-  }
 
   @media (max-width: 660px) {
     width: 80vw;
@@ -50,43 +45,19 @@ export const Sidebarr = styled.div`
   max-height: 100%;
   margin-inline: auto;
 
-  @media (max-width: 1100px) {
-    height: 100%;
-  }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     width: 100vw;
-    height: 100%;
-  }
-  @media (max-width: 620px) {
-    width: 80vw;
-    height: 100%;
-  }
-  @media (max-width: 450px) {
-    width: 100vw;
-    height: 100%;
-  }
+    min-height: 100%;
+  } */
 `;
 
 export const Filter = styled.div`
-  height: 35px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
-
-  @media (max-width: 1100px) {
-  }
-  @media (max-width: 768px) {
-    height: 8%;
-    align-items: center;
-  }
-  @media (max-width: 620px) {
-    height: 8%;
-  }
-  @media (max-width: 450px) {
-    height: 8%;
-  }
+  padding: 0.7rem;
 `;
 
 export const Button = styled.button`
@@ -172,12 +143,13 @@ export const CardContainer = styled.div`
   overflow-y: scroll;
   scrollbar-width: thin;
   max-height: 100%;
-  padding-right: 1rem;
+  padding: 1rem;
+  padding-top: 0;
 
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     flex: 3;
     margin-bottom: 5rem;
-  }
+  } */
 
   &::-webkit-scrollbar {
     width: 5px;

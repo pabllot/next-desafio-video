@@ -5,27 +5,13 @@
   margin: 0;
   gap: 20px;
   height: 100vh;
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
   overflow: hidden;
-
 }
-
-
 
 @media (max-width: 768px) {
-  .main{
+  .main {
     flex-direction: column;
     gap: 0px;
-
   }
 }
-
-
-@media (max-width: 420px) {
-  .main{
-  
-  flex-direction: column;
-  gap: 0px;
-
-
-}}
