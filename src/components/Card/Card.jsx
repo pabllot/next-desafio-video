@@ -1,11 +1,42 @@
-import React, { useState } from "react";
-import { Container, Left, Right, Title, Author, Views } from "./styles";
+import React, { useEffect, useState } from "react";
+import { Container, Left, Right, Title, Author, Views, Star } from "./styles";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-export const Card = ({ name, author, views, img, url, setChosenVideo, alt, setSpeed }) => {
+export const Card = ({
+  name,
+  author,
+  views,
+  img,
+  url,
+  setChosenVideo,
+  alt,
+  setSpeed,
+  id,
+}) => {
   const ChooseNewVideo = (url) => {
     setChosenVideo(url);
     setSpeed(1);
   };
+  const initialArrayFav =
+    JSON.parse(localStorage.getItem("favoriteVideos")) || [];
+  const [arrayFav, setArrayFav] = useState(initialArrayFav);
+
+  const setFavorite = (e, id) => {
+    e.stopPropagation();
+    if (arrayFav.includes(id)) {
+      setArrayFav(arrayFav.filter((favId) => favId !== id));
+      return;
+    }
+    setArrayFav([...arrayFav, id]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("favoriteVideos", JSON.stringify(arrayFav));
+  }, [arrayFav]);
+
+  function isIdInArrayFav(id, arrayFav) {
+    return arrayFav.includes(id);
+  }
 
   return (
     <Container onClick={() => ChooseNewVideo(url)}>
@@ -17,6 +48,9 @@ export const Card = ({ name, author, views, img, url, setChosenVideo, alt, setSp
           <Views>{views} views</Views>
         </div>
       </Right>
+      <Star onClick={(e) => setFavorite(e, id)}>
+        {isIdInArrayFav(id, arrayFav) ? <AiFillStar /> : <AiOutlineStar />}
+      </Star>
     </Container>
   );
 };

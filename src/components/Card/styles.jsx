@@ -92,3 +92,10 @@ export const Views = styled.p`
   font-weight: 300;
   margin: 0;
 `;
+export const Star = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  color: yellow;
+  margin-right: 0.5rem;
+`;

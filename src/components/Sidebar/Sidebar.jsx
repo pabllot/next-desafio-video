@@ -1,14 +1,25 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
-import { Container, Sidebarr, Filter, Button, LargeButton, Icon, CardContainer } from "./styles";
-import { BsSunFill } from "react-icons/bs";
-import { IoMdMoon } from "react-icons/io";
+import {
+  Container,
+  Sidebarr,
+  Filter,
+  Button,
+  LargeButton,
+  CardContainer,
+} from "./styles";
 
-export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data, speed, setSpeed }) => {
+export const Sidebar = ({
+  setChosenVideo,
+  toggleTheme,
+  theme,
+  data,
+  speed,
+  setSpeed,
+}) => {
   const [filter, setFilter] = useState("kids");
   const [filteredVids, setFilteredVids] = useState([]);
 
-  // vai filtrar todos os videos do db e retornar somente os que tem o mesmo genero,
   useEffect(() => {
     setFilteredVids([]);
     data.map((video) => {
@@ -21,7 +32,9 @@ export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data, speed, setSp
       <Sidebarr>
         <Filter>
           <Button onClick={() => setFilter("kids")}>Random</Button>
-          <LargeButton onClick={() => setFilter("office")}>The Office</LargeButton>
+          <LargeButton onClick={() => setFilter("office")}>
+            The Office
+          </LargeButton>
         </Filter>
         <CardContainer>
           {filteredVids.slice(0, 7).map((item) => (
@@ -37,6 +50,7 @@ export const Sidebar = ({ setChosenVideo, toggleTheme, theme, data, speed, setSp
               views={item.views}
               img={item.img}
               alt={item.alt}
+              id={item.id}
             />
           ))}
         </CardContainer>
