@@ -11,14 +11,13 @@ import {
   VolumeContainer,
   VolumeSlider,
 } from "./styles";
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 import { IoMdPlay, IoMdPause } from "react-icons/io";
 import { MdVolumeOff } from "react-icons/md";
 import { BiFullscreen, BiExitFullscreen } from "react-icons/bi";
-import { CgScreenWide, CgScreen } from "react-icons/cg";
 import { GoUnmute } from "react-icons/go";
 
-export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, setSpeed }) => {
+export const Video = ({ chosenVideo, speed, setSpeed }) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(true);
   const [isMute, setIsMute] = useState(false);
@@ -29,7 +28,6 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
   const volumeRef = useRef(null);
 
   // modo teatro
-  const toggleTheaterMode = () => setIsTheaterMode((prev) => !prev);
 
   //dar play no vídeo - usando useRef p acessar a DOM com o built-in methods de video play/pause
   const togglePlay = useCallback(() => {
@@ -47,8 +45,10 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
   // ajustar volume de acordo com a barrinha
   const handleRange = (e) => {
     if (e.target.value < 0.01) (vidRef.current.volume = 0), setIsMute(true);
-    else if (e.target.value > 0.01 && e.target.value < 0.3) (vidRef.current.volume = 0.1), setIsMute(false);
-    else if (e.target.value > 0.3 && e.target.value < 0.7) (vidRef.current.volume = 0.5), setIsMute(false);
+    else if (e.target.value > 0.01 && e.target.value < 0.3)
+      (vidRef.current.volume = 0.1), setIsMute(false);
+    else if (e.target.value > 0.3 && e.target.value < 0.7)
+      (vidRef.current.volume = 0.5), setIsMute(false);
     else vidRef.current.volume = 1;
   };
 
@@ -72,7 +72,9 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
     if (hours === 0) {
       return `${minutes}:${startWithZero.format(seconds)}`;
     } else {
-      return `${hours}:${startWithZero.format(minutes)}:${startWithZero.format(seconds)}`;
+      return `${hours}:${startWithZero.format(minutes)}:${startWithZero.format(
+        seconds
+      )}`;
     }
   };
 
@@ -84,7 +86,9 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
   }, [vidRef, setSpeed]);
 
   // para mostrar a barrinha carregando conforme o tempo passa
-  const progressWidth = (100 / parseInt(duration?.replace(":", ""))) * parseInt(currentTime?.replace(":", ""));
+  const progressWidth =
+    (100 / parseInt(duration?.replace(":", ""))) *
+    parseInt(currentTime?.replace(":", ""));
 
   // ir para o momento do vídeo clicado
   const getNewCurrentTime = useCallback(
@@ -106,14 +110,21 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
 
   return (
     <Container>
-      <VideoContainer isTheaterMode={isTheaterMode} ref={fullScreenRef}>
+      <VideoContainer ref={fullScreenRef}>
         <Timeline onClick={getNewCurrentTime} className="progressinho" />
-        <Progress isVideoPaused={isVideoPaused} style={{ width: `${progressWidth}%` }} />
+        <Progress
+          isVideoPaused={isVideoPaused}
+          style={{ width: `${progressWidth}%` }}
+        />
         <VideoControlsContainer isVideoPaused={isVideoPaused}>
           <Controls>
-            <Button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</Button>
+            <Button onClick={togglePlay}>
+              {!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}
+            </Button>
             <VolumeContainer>
-              <Button onClick={toggleMute}>{!isMute ? <GoUnmute /> : <MdVolumeOff />}</Button>
+              <Button onClick={toggleMute}>
+                {!isMute ? <GoUnmute /> : <MdVolumeOff />}
+              </Button>
               <VolumeSlider
                 ref={volumeRef}
                 onInput={(e) => handleRange(e)}
@@ -131,14 +142,19 @@ export const Video = ({ isTheaterMode, setIsTheaterMode, chosenVideo, speed, set
             </DurationContainer>
 
             <SpeedButton onClick={changeSpeed}>{speed}x</SpeedButton>
-            <Button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide /> : <CgScreen />}</Button>
-            <Button onClick={toggleFullScreen}>{isFullScreen ? <BiFullscreen /> : <BiExitFullscreen />}</Button>
+            <Button onClick={toggleFullScreen}>
+              {isFullScreen ? <BiFullscreen /> : <BiExitFullscreen />}
+            </Button>
           </Controls>
         </VideoControlsContainer>
         <video
           ref={vidRef}
-          onTimeUpdate={() => setCurrentTime(formatDuration(vidRef?.current?.currentTime))}
-          onLoadedMetadata={() => setDuration(formatDuration(vidRef?.current?.duration))}
+          onTimeUpdate={() =>
+            setCurrentTime(formatDuration(vidRef?.current?.currentTime))
+          }
+          onLoadedMetadata={() =>
+            setDuration(formatDuration(vidRef?.current?.duration))
+          }
           src={chosenVideo}
           type="video/mp4"
           loop
