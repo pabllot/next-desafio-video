@@ -85,22 +85,6 @@ export const Button = styled.button`
     font-size: 12.5px;
     color: yellow;
   }
-
-  @media (max-width: 1100px) {
-    width: 39px;
-    height: 20px;
-    font-size: 13px;
-  }
-  @media (max-width: 768px) {
-    font-size: 12px;
-    width: 80px;
-    height: 20px;
-  }
-  @media (max-width: 450px) {
-    font-size: 12px;
-    width: 54px;
-    height: 20px;
-  }
 `;
 
 export const Icon = styled.div`
