@@ -93,39 +93,7 @@ export const Button = styled.button`
     height: 20px;
   }
 `;
-export const LargeButton = styled.button`
-  background-color: #3a3939;
-  color: #e9e0e0;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  outline-style: none;
-  height: 25px;
-  position: relative;
-  border-radius: 4px;
-  padding: 0.2rem 0.4rem;
 
-  @media (max-width: 1100px) {
-    width: 60px;
-    height: 20px;
-    font-size: 12.5px;
-  }
-  @media (max-width: 768px) {
-    font-size: 12px;
-    width: 70px;
-    height: 20px;
-  }
-  @media (max-width: 450px) {
-    font-size: 12px;
-    width: 70px;
-    height: 20px;
-  }
-`;
 export const Icon = styled.div`
   display: flex;
   align-items: center;
