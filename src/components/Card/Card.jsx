@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Container, Left, Right, Title, Author, Views, Star } from "./styles";
+import { useEffect } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+
+import { Container, Left, Right, Title, Author, Views, Star } from "./styles";
 
 export const Card = ({
   name,
@@ -12,14 +13,13 @@ export const Card = ({
   alt,
   setSpeed,
   id,
+  arrayFav,
+  setArrayFav,
 }) => {
   const ChooseNewVideo = (url) => {
     setChosenVideo(url);
     setSpeed(1);
   };
-  const initialArrayFav =
-    JSON.parse(localStorage.getItem("favoriteVideos")) || [];
-  const [arrayFav, setArrayFav] = useState(initialArrayFav);
 
   const setFavorite = (e, id) => {
     e.stopPropagation();
@@ -49,7 +49,11 @@ export const Card = ({
         </div>
       </Right>
       <Star onClick={(e) => setFavorite(e, id)}>
-        {isIdInArrayFav(id, arrayFav) ? <AiFillStar /> : <AiOutlineStar />}
+        {isIdInArrayFav(id, arrayFav) ? (
+          <AiFillStar />
+        ) : (
+          <AiOutlineStar color="gray" />
+        )}
       </Star>
     </Container>
   );

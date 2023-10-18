@@ -76,6 +76,15 @@ export const Button = styled.button`
   position: relative;
   border-radius: 4px;
   padding: 0.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  > svg {
+    margin-top: 0.5px;
+    font-size: 12.5px;
+    color: yellow;
+  }
 
   @media (max-width: 1100px) {
     width: 39px;
@@ -139,5 +148,25 @@ export const CardContainer = styled.div`
   button {
     all: unset;
     cursor: pointer;
+  }
+`;
+export const FavEmpty = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  color: white;
+  font-size: 1rem;
+
+  > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    height: 10%;
+    > svg {
+      font-size: 1.4rem;
+    }
   }
 `;
