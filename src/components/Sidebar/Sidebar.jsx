@@ -11,6 +11,7 @@ import {
   FavEmpty,
 } from "./styles";
 import { Card } from "../Card/Card";
+import styles from "../../../styles/Home.module.css";
 
 export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed }) => {
   const [filter, setFilter] = useState("kids");
@@ -35,9 +36,22 @@ export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed }) => {
     <Container>
       <Sidebarr>
         <Filter>
-          <Button onClick={() => setFilter("kids")}>Random</Button>
-          <Button onClick={() => setFilter("office")}>The Office</Button>
-          <Button onClick={() => setFilter("Fav")}>
+          <Button
+            className={`${filter === "kids" ? styles.active : ""}`}
+            onClick={() => setFilter("kids")}
+          >
+            Random
+          </Button>
+          <Button
+            className={`${filter === "office" ? styles.active : ""}`}
+            onClick={() => setFilter("office")}
+          >
+            The Office
+          </Button>
+          <Button
+            className={`${filter === "Fav" ? styles.active : ""}`}
+            onClick={() => setFilter("Fav")}
+          >
             Favorites <AiFillStar />
           </Button>
         </Filter>

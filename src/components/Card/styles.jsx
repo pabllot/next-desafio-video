@@ -96,6 +96,6 @@ export const Star = styled.div`
   display: flex;
   justify-content: center;
   width: 10%;
-  color: yellow;
+  color: #fccf68;
   margin-right: 0.5rem;
 `;

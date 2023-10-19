@@ -59,9 +59,10 @@ export const Filter = styled.div`
   gap: 1rem;
   padding: 0.7rem;
   padding-top: 0rem;
-
+  margin-left: 5px;
   @media (max-width: 768px) {
     padding-top: 0.7rem;
+    margin: 0;
   }
 `;
 
@@ -77,10 +78,9 @@ export const Button = styled.button`
   font-size: 14px;
   font-weight: 700;
   outline-style: none;
-  height: 25px;
   position: relative;
   border-radius: 4px;
-  padding: 0.2rem 0.4rem;
+  padding: 0.3rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +88,7 @@ export const Button = styled.button`
   > svg {
     margin-top: 0.5px;
     font-size: 12.5px;
-    color: yellow;
+    color: #fccf68;
   }
 `;
 

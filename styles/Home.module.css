@@ -15,3 +15,8 @@
     gap: 0px;
   }
 }
+
+body .active {
+  background-color: #555;
+  color: white;
+}

@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   position: absolute;
   top: 0;
-  background-color: #333;
+  background-color: rgb(34, 34, 34);
   height: 5rem;
   -webkit-box-shadow: 0px 2px 8px -4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 2px 8px -4px rgba(0, 0, 0, 0.2);
