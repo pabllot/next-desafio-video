@@ -52,13 +52,13 @@
     },
     {
       "id": 51,
-      "name": "Reality",
+      "name": "Joey being Joey",
       "author": "Pablo Teixeira",
       "views": "5446",
-      "img": "/assets/pics/scene6.webp",
+      "img": "/assets/pics/scene3.webp",
       "alt": "thumbnail",
       "genre": "kids",
-      "url": "/assets/vids/scene6.mp4"
+      "url": "/assets/vids/scene3.mp4"
     },
     {
       "id": 22,
@@ -69,6 +69,16 @@
       "alt": "thumbnail",
       "genre": "kids",
       "url": "/assets/vids/scene7.mp4"
+    },
+    {
+      "id": 66,
+      "name": "Dwight impersonation",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/office7.webp",
+      "alt": "thumbnail",
+      "genre": "office",
+      "url": "/assets/vids/office7.mp4"
     },
     {
       "id": 1,
@@ -122,16 +132,6 @@
     },
     {
       "id": 6,
-      "name": "Jim and Andy",
-      "author": "Pablo Teixeira",
-      "views": "5446",
-      "img": "/assets/pics/office6.webp",
-      "alt": "thumbnail",
-      "genre": "office",
-      "url": "/assets/vids/office6.mp4"
-    },
-    {
-      "id": 66,
       "name": "Jim and Andy",
       "author": "Pablo Teixeira",
       "views": "5446",
