@@ -65,6 +65,7 @@ export default createGlobalStyle`
 
   @media(max-width:768px){
     flex-direction: column;
+    padding-top: 3.5rem;
   }
 }
 `;
