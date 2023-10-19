@@ -8,6 +8,7 @@ import GlobalStyle from "../styles/global";
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
 import styles from "../styles/Home.module.css";
+import Header from "../src/components/Header/Header";
 
 export default function Home({ data }) {
   const [speed, setSpeed] = useState(1);
@@ -40,7 +41,8 @@ export default function Home({ data }) {
             <div className="loader" />
           </div>
         ) : (
-          <>
+          <div className="wrapperwholepage">
+            <Header />
             <Video
               speed={speed}
               setSpeed={setSpeed}
@@ -55,7 +57,7 @@ export default function Home({ data }) {
               toggleTheme={toggleTheme}
               theme={theme}
             />
-          </>
+          </div>
         )}
       </main>
     </ThemeProvider>

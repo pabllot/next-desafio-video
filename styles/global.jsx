@@ -54,4 +54,17 @@ export default createGlobalStyle`
     transform: scale(1) rotate(360deg);
   }
 }
+
+.wrapperwholepage {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+
+  @media(max-width:768px){
+    flex-direction: column;
+  }
+}
 `;

@@ -58,6 +58,11 @@ export const Filter = styled.div`
   justify-content: flex-start;
   gap: 1rem;
   padding: 0.7rem;
+  padding-top: 0rem;
+
+  @media (max-width: 768px) {
+    padding-top: 0.7rem;
+  }
 `;
 
 export const Button = styled.button`
