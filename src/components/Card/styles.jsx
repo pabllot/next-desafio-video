@@ -8,70 +8,37 @@ export const Container = styled.div`
   justify-content: center;
   gap: 8px;
   cursor: pointer;
+  border-radius: 5px;
 
   &:hover {
     background-color: #a2a0a047;
   }
-
-  /* @media (max-width: 1024px) {
-    width: 320px;
-    height: 94px;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 18%;
-  }
-  @media (max-width: 620px) {
-    width: 90%;
-    height: 18%;
-  }
-  @media (max-width: 350px) {
-    width: 90%;
-    height: 18%;
-  } */
 `;
 export const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 70%;
+  width: 50%;
   height: 100px;
-
-  /* @media (max-width: 768px) {
-    height: 85%;
-    width: 50%;
+  @media (max-width: 768px) {
+    width: 45%;
   }
-  @media (max-width: 620px) {
-    height: 85%;
-    width: 50%;
+`;
+export const ImageContainer = styled.div`
+  width: 40%;
+  height: 90%;
+  border-radius: 5px !important;
+  padding-left: 0.75rem;
+  @media (max-width: 768px) {
+    width: 45%;
   }
-  @media (max-width: 350px) {
-    width: 50%;
-    height: 85%;
-  } */
 `;
 
 export const Left = styled.img`
-  width: 30%;
-  height: 90%;
-  border-radius: 4px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  @media (max-width: 1024px) {
-    width: 125px;
-  }
-  @media (max-width: 768px) {
-    height: 85%;
-    width: 33%;
-  }
-  @media (max-width: 620px) {
-    height: 85%;
-    width: 45%;
-  }
-  @media (max-width: 350px) {
-    width: 40%;
-    height: 85%;
-  }
+  border-radius: 5px !important;
 `;
 
 export const Title = styled.div`

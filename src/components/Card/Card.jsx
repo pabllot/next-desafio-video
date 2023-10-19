@@ -1,7 +1,16 @@
 import { useEffect } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-import { Container, Left, Right, Title, Author, Views, Star } from "./styles";
+import {
+  Container,
+  Left,
+  Right,
+  Title,
+  Author,
+  Views,
+  Star,
+  ImageContainer,
+} from "./styles";
 
 export const Card = ({
   name,
@@ -40,7 +49,9 @@ export const Card = ({
 
   return (
     <Container onClick={() => ChooseNewVideo(url)}>
-      <Left src={img} alt={alt} />
+      <ImageContainer>
+        <Left src={img} alt={alt} />
+      </ImageContainer>
       <Right>
         <Title>{name}</Title>
         <div>

@@ -44,11 +44,6 @@ export const Sidebarr = styled.div`
   width: 100%;
   max-height: 100%;
   margin-inline: auto;
-
-  /* @media (max-width: 768px) {
-    width: 100vw;
-    min-height: 100%;
-  } */
 `;
 
 export const Filter = styled.div`
