@@ -28,12 +28,13 @@ export const VideoControlsContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  color: white;
+  color: #ffffff;
   z-index: 100;
   transition: opacity 150ms ease-in-out;
-  background-color: rgba(38, 37, 37, 0.438);
+  background-color: rgba(38, 37, 37, 0.89);
   border-top: 4px solid rgb(215, 202, 202);
   opacity: ${(props) => (props.isVideoPaused ? "1" : "0")};
+  padding: 4px 7px;
 `;
 
 export const Timeline = styled.div`
@@ -49,10 +50,10 @@ export const Timeline = styled.div`
 
 export const Progress = styled.div`
   height: 4px;
-  background: #c51919;
+  background: #586ca5;
   position: absolute;
   z-index: 998;
-  bottom: 38px;
+  bottom: 46px;
   left: 0;
   opacity: ${(props) => (props.isVideoPaused ? "1" : "0")};
   transition: opacity 150ms ease-in-out;

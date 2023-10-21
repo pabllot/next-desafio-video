@@ -58,7 +58,7 @@ export const Filter = styled.div`
   gap: 1rem;
   padding: 0.7rem;
   padding-top: 0rem;
-  margin-left: 5px;
+  margin-left: 17px;
   @media (max-width: 768px) {
     padding-top: 0.9rem;
     margin: 0;
