@@ -14,7 +14,7 @@ export const Container = styled.div`
   box-shadow: 0px 2px 8px -4px rgba(0, 0, 0, 0.2);
   z-index: 999;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     height: 3.5rem;
   }
 `;
@@ -27,7 +27,7 @@ export const Title = styled.h2`
   letter-spacing: 0.2rem;
   color: #fccf68;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 1.2rem;
   }
 `;

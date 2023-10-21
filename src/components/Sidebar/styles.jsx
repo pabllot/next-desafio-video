@@ -14,11 +14,15 @@ export const Container = styled.div`
     display: none;
   }
 
+  @media (max-width: 1523px) {
+    max-width: 450px;
+    height: 650px;
+  }
   @media (max-width: 1366px) {
     max-width: 450px;
-    height: 700px;
+    height: 600px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     max-width: 100%;
     padding: 0;
   }
@@ -59,7 +63,7 @@ export const Filter = styled.div`
   padding: 0.7rem;
   padding-top: 0rem;
   margin-left: 17px;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     padding-top: 0.9rem;
     margin: 0;
     justify-content: center;
@@ -139,7 +143,7 @@ export const CardContainer = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     padding: 0.2rem;
   }
 `;

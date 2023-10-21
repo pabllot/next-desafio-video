@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .main {
     flex-direction: column;
     gap: 0px;

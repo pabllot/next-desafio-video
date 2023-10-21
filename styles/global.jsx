@@ -63,7 +63,7 @@ export default createGlobalStyle`
   align-items: center;
   padding-top: 5rem;
 
-  @media(max-width:768px){
+  @media(max-width:992px){
     flex-direction: column;
     padding-top: 3.5rem;
   }

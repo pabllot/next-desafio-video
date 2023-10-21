@@ -21,7 +21,7 @@ export const Right = styled.div`
   justify-content: flex-start;
   width: 50%;
   height: 100px;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     width: 47.5%;
   }
 `;
@@ -32,7 +32,7 @@ export const ImageContainer = styled.div`
   padding-left: 0.75rem;
   position: relative;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     width: 47.5%;
   }
 `;
@@ -48,7 +48,7 @@ export const ISWatchingText = styled.div`
   color: white;
   opacity: 0.7;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     font-size: 0.7rem;
   }
 `;
@@ -84,7 +84,7 @@ export const Star = styled.div`
   width: 10%;
   color: #fccf68;
   margin-right: 0.5rem;
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     width: 5%;
     justify-content: flex-start;
   }

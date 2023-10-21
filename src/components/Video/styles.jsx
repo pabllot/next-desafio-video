@@ -13,12 +13,20 @@ export const Container = styled.div`
     overflow: hidden;
   }
 
+  @media (max-width: 1523px) {
+    max-width: 900px;
+    height: 650px;
+  }
   @media (max-width: 1366px) {
     max-width: 700px;
+    height: 600px;
+  }
+  @media (max-width: 992px) {
+    max-width: 100%;
     height: 700px;
   }
   /* 
-  @media (max-width: 768px) { height: 30% }  
+  @media (max-width: 992px) { height: 30% }  
   @media (max-width: 620px) { height: 30% }  
   @media (max-width: 450px) { height: 30% } */
 `;
@@ -81,21 +89,9 @@ export const VideoContainer = styled.div`
     height: 100%;
   }
 
-  @media (max-width: 768px) {
-    width: ${(props) => (props.isTheaterMode ? "100vw" : "50vw")};
+  @media (max-width: 992px) {
+    width: 100%;
     height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
-    border-radius: 0px;
-  }
-
-  @media (max-width: 660px) {
-    width: ${(props) => (props.isTheaterMode ? "100vw" : "80vw")};
-    height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
-    border-radius: 0px;
-  }
-
-  @media (max-width: 420px) {
-    height: ${(props) => (props.isTheaterMode ? "82vh" : "100%")};
-    width: 100vw;
     border-radius: 0px;
   }
 `;
@@ -109,7 +105,7 @@ export const VolumeContainer = styled.div`
     transform: scaleX(1);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .volume-slider {
       width: 60px;
       transform: scaleX(1);
