@@ -18,6 +18,10 @@ export const Container = styled.div`
     max-width: 450px;
     height: 700px;
   }
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 0;
+  }
 
   /* @media (max-width: 1100px) {
     max-height: 580px;
@@ -56,8 +60,9 @@ export const Filter = styled.div`
   padding-top: 0rem;
   margin-left: 5px;
   @media (max-width: 768px) {
-    padding-top: 0.7rem;
+    padding-top: 0.9rem;
     margin: 0;
+    justify-content: center;
   }
 `;
 
@@ -132,6 +137,10 @@ export const CardContainer = styled.div`
   button {
     all: unset;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.2rem;
   }
 `;
 export const FavEmpty = styled.div`

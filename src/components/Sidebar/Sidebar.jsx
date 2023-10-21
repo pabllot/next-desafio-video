@@ -2,22 +2,14 @@ import { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { HiOutlineEmojiSad } from "react-icons/hi";
 
-import {
-  Container,
-  Sidebarr,
-  Filter,
-  Button,
-  CardContainer,
-  FavEmpty,
-} from "./styles";
+import { Container, Sidebarr, Filter, Button, CardContainer, FavEmpty } from "./styles";
 import { Card } from "../Card/Card";
 import styles from "../../../styles/Home.module.css";
 
-export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed }) => {
+export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed, chosenVideo }) => {
   const [filter, setFilter] = useState("kids");
   const [filteredVids, setFilteredVids] = useState([]);
-  const initialArrayFav =
-    JSON.parse(localStorage.getItem("favoriteVideos")) || [];
+  const initialArrayFav = JSON.parse(localStorage.getItem("favoriteVideos")) || [];
   const [arrayFav, setArrayFav] = useState(initialArrayFav);
 
   useEffect(() => {
@@ -36,22 +28,13 @@ export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed }) => {
     <Container>
       <Sidebarr>
         <Filter>
-          <Button
-            className={`${filter === "kids" ? styles.active : ""}`}
-            onClick={() => setFilter("kids")}
-          >
+          <Button className={`${filter === "kids" ? styles.active : ""}`} onClick={() => setFilter("kids")}>
             Random
           </Button>
-          <Button
-            className={`${filter === "office" ? styles.active : ""}`}
-            onClick={() => setFilter("office")}
-          >
+          <Button className={`${filter === "office" ? styles.active : ""}`} onClick={() => setFilter("office")}>
             The Office
           </Button>
-          <Button
-            className={`${filter === "Fav" ? styles.active : ""}`}
-            onClick={() => setFilter("Fav")}
-          >
+          <Button className={`${filter === "Fav" ? styles.active : ""}`} onClick={() => setFilter("Fav")}>
             Favorites <AiFillStar />
           </Button>
         </Filter>
@@ -79,6 +62,7 @@ export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed }) => {
               id={item.id}
               arrayFav={arrayFav}
               setArrayFav={setArrayFav}
+              chosenVideo={chosenVideo}
             />
           ))}
         </CardContainer>

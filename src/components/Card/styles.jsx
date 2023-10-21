@@ -9,6 +9,7 @@ export const Container = styled.div`
   gap: 8px;
   cursor: pointer;
   border-radius: 5px;
+  opacity: 1;
 
   &:hover {
     background-color: #a2a0a047;
@@ -21,7 +22,7 @@ export const Right = styled.div`
   width: 50%;
   height: 100px;
   @media (max-width: 768px) {
-    width: 45%;
+    width: 47.5%;
   }
 `;
 export const ImageContainer = styled.div`
@@ -29,8 +30,26 @@ export const ImageContainer = styled.div`
   height: 90%;
   border-radius: 5px !important;
   padding-left: 0.75rem;
+  position: relative;
+
   @media (max-width: 768px) {
-    width: 45%;
+    width: 47.5%;
+  }
+`;
+
+export const ISWatchingText = styled.div`
+  font-size: 0.9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  opacity: 0.7;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
   }
 `;
 
@@ -65,4 +84,8 @@ export const Star = styled.div`
   width: 10%;
   color: #fccf68;
   margin-right: 0.5rem;
+  @media (max-width: 768px) {
+    width: 5%;
+    justify-content: flex-start;
+  }
 `;
