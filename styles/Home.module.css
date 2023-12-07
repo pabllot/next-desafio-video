@@ -6,7 +6,6 @@
   gap: 20px;
   height: 100vh;
   font-family: "Hanken Grotesk", sans-serif;
-  overflow: hidden;
 }
 
 @media (max-width: 992px) {
