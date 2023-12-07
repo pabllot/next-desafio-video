@@ -66,6 +66,7 @@ export default createGlobalStyle`
   @media(max-width:992px){
     flex-direction: column;
     padding-top: 3.5rem;
+    min-height: 100svh;
   }
 }
 `;
