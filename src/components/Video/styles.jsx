@@ -43,8 +43,6 @@ export const VideoControlsContainer = styled.div`
   border-top: 4px solid rgb(215, 202, 202);
   opacity: ${(props) => (props.isVideoPaused ? "1" : "0")};
   padding: 4px 7px;
-  @media (max-width: 992px) { display:none }  
-
 `;
 
 export const Timeline = styled.div`
