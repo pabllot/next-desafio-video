@@ -12,6 +12,8 @@
   .main {
     flex-direction: column;
     gap: 0px;
+    min-height: 100svh;
+    height: 100%;
   }
 }
 
