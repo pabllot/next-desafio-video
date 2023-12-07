@@ -116,7 +116,7 @@ export const Video = ({ chosenVideo, speed, setSpeed }) => {
           isVideoPaused={isVideoPaused}
           style={{ width: `${progressWidth}%` }}
         />
-        {/* <VideoControlsContainer isVideoPaused={isVideoPaused}>
+        <VideoControlsContainer isVideoPaused={isVideoPaused}>
           <Controls>
             <Button onClick={togglePlay}>
               {!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}
@@ -146,7 +146,7 @@ export const Video = ({ chosenVideo, speed, setSpeed }) => {
               {isFullScreen ? <BiFullscreen /> : <BiExitFullscreen />}
             </Button>
           </Controls>
-        </VideoControlsContainer> */}
+        </VideoControlsContainer>
         <video
           ref={vidRef}
           onTimeUpdate={() =>
