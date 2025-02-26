@@ -1,16 +1,6 @@
 {
   "vids": [
     {
-      "id": 16,
-      "name": "Not in the right place",
-      "author": "Pablo Teixeira",
-      "views": "9122",
-      "img": "/assets/pics/scene1.webp",
-      "alt": "thumbnail",
-      "genre": "kids",
-      "url": "/assets/vids/scene1.mp4"
-    },
-    {
       "id": 17,
       "name": "Let it brake",
       "author": "Pablo Teixeira",
@@ -32,13 +22,33 @@
     },
     {
       "id": 20,
-      "name": "Until it makes you bleed",
+      "name": "Keeper of perspective",
       "author": "Pablo Teixeira",
       "views": "5446",
       "img": "/assets/pics/scene5.webp",
       "alt": "thumbnail",
       "genre": "kids",
       "url": "/assets/vids/scene5.mp4"
+    },
+    {
+      "id": 51,
+      "name": "Pretend like it's the first time",
+      "author": "Pablo Teixeira",
+      "views": "5446",
+      "img": "/assets/pics/scene3.webp",
+      "alt": "thumbnail",
+      "genre": "kids",
+      "url": "/assets/vids/scene3.mp4"
+    },
+    {
+      "id": 16,
+      "name": "Not in the right place",
+      "author": "Pablo Teixeira",
+      "views": "9122",
+      "img": "/assets/pics/scene1.webp",
+      "alt": "thumbnail",
+      "genre": "kids",
+      "url": "/assets/vids/scene1.mp4"
     },
     {
       "id": 21,
@@ -49,16 +59,6 @@
       "alt": "thumbnail",
       "genre": "kids",
       "url": "/assets/vids/scene6.mp4"
-    },
-    {
-      "id": 51,
-      "name": "Joey being Joey",
-      "author": "Pablo Teixeira",
-      "views": "5446",
-      "img": "/assets/pics/scene3.webp",
-      "alt": "thumbnail",
-      "genre": "kids",
-      "url": "/assets/vids/scene3.mp4"
     },
     {
       "id": 22,

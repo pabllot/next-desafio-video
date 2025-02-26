@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { HiOutlineEmojiSad } from "react-icons/hi";
 
-import { Container, Sidebarr, Filter, Button, CardContainer, FavEmpty } from "./styles";
-import { Card } from "../Card/Card";
 import styles from "../../../styles/Home.module.css";
+import { Card } from "../Card/Card";
+import { Button, CardContainer, Container, FavEmpty, Filter, Sidebarr } from "./styles";
 
 export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed, chosenVideo }) => {
   const [filter, setFilter] = useState("kids");
@@ -29,7 +29,7 @@ export const Sidebar = ({ setChosenVideo, theme, data, speed, setSpeed, chosenVi
       <Sidebarr>
         <Filter>
           <Button className={`${filter === "kids" ? styles.active : ""}`} onClick={() => setFilter("kids")}>
-            Random
+            Deep Stuff
           </Button>
           <Button className={`${filter === "office" ? styles.active : ""}`} onClick={() => setFilter("office")}>
             The Office
