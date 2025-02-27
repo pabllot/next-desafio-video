@@ -1,21 +1,8 @@
+import { useCallback, useRef, useState } from "react";
 import {
-  Button,
   Container,
-  Controls,
-  DurationContainer,
-  Progress,
-  SpeedButton,
-  Timeline,
-  VideoContainer,
-  VideoControlsContainer,
-  VolumeContainer,
-  VolumeSlider,
+  VideoContainer
 } from "./styles";
-import { useState, useRef, useCallback } from "react";
-import { IoMdPlay, IoMdPause } from "react-icons/io";
-import { MdVolumeOff } from "react-icons/md";
-import { BiFullscreen, BiExitFullscreen } from "react-icons/bi";
-import { GoUnmute } from "react-icons/go";
 
 export const Video = ({ chosenVideo, speed, setSpeed }) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true);
@@ -111,12 +98,12 @@ export const Video = ({ chosenVideo, speed, setSpeed }) => {
   return (
     <Container>
       <VideoContainer ref={fullScreenRef}>
-        <Timeline onClick={getNewCurrentTime} className="progressinho" />
+        {/* <Timeline onClick={getNewCurrentTime} className="progressinho" />
         <Progress
           isVideoPaused={isVideoPaused}
           style={{ width: `${progressWidth}%` }}
-        />
-        <VideoControlsContainer isVideoPaused={isVideoPaused}>
+        /> */}
+        {/* <VideoControlsContainer isVideoPaused={isVideoPaused}>
           <Controls>
             <Button onClick={togglePlay}>
               {!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}
@@ -146,7 +133,7 @@ export const Video = ({ chosenVideo, speed, setSpeed }) => {
               {isFullScreen ? <BiFullscreen /> : <BiExitFullscreen />}
             </Button>
           </Controls>
-        </VideoControlsContainer>
+        </VideoControlsContainer> */}
         <video
           ref={vidRef}
           onTimeUpdate={() =>
@@ -158,9 +145,10 @@ export const Video = ({ chosenVideo, speed, setSpeed }) => {
           src={chosenVideo}
           type="video/mp4"
           loop
+          controls
           autoPlay={isVideoPaused ? false : true}
-        />
-      </VideoContainer>
+          />
+          </VideoContainer>
     </Container>
   );
 };
